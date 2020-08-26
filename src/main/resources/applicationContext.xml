@@ -14,22 +14,21 @@
        http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 ">
 
-    <!--    开启注解扫描，要扫描的是service和dao层的注解，要忽略web层注解，因为web层让SpringMVC框架
-    去管理 -->
-    <context:component-scan base-package="cn.maixedu.zsb.service"/>
-    <context:component-scan base-package="cn.maixedu.zsb.dao"/>
+    <context:component-scan base-package="cn.maixedu.zsb">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
     <context:property-placeholder location="classpath:database.properties"/>
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="${driver}"/>
         <property name="jdbcUrl" value="${url}"/>
-        <property name="user" value="${user}"/>
+        <property name="user" value="${username}"/>
         <property name="password" value="${password}"/>
     </bean>
 
     <!--    dao和Mapper映射 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.leiqichao.dao"></property>
+        <property name="basePackage" value="cn.maixedu.zsb.dao" />
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
