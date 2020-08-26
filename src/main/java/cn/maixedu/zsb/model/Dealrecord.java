@@ -1,77 +1,75 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
 
-public class Dealrecord {
+public class DealRecord {
+    private Integer id;
 
-  private long id;
-  private long userid;
-  private String type;
-  private double money;
-  private java.sql.Timestamp time;
-  private String note;
-  private long historymoney;
+    private Integer userid;
 
+    private String type;
 
-  public long getId() {
-    return id;
-  }
+    private Double money;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private Date time;
 
+    private String note;
 
-  public long getUserid() {
-    return userid;
-  }
+    private Integer historymoney;
 
-  public void setUserid(long userid) {
-    this.userid = userid;
-  }
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public String getType() {
-    return type;
-  }
+    public Integer getUserid() {
+        return userid;
+    }
 
-  public void setType(String type) {
-    this.type = type;
-  }
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
 
+    public String getType() {
+        return type;
+    }
 
-  public double getMoney() {
-    return money;
-  }
+    public void setType(String type) {
+        this.type = type;
+    }
 
-  public void setMoney(double money) {
-    this.money = money;
-  }
+    public Double getMoney() {
+        return money;
+    }
 
+    public void setMoney(Double money) {
+        this.money = money;
+    }
 
-  public java.sql.Timestamp getTime() {
-    return time;
-  }
+    public Date getTime() {
+        return time;
+    }
 
-  public void setTime(java.sql.Timestamp time) {
-    this.time = time;
-  }
+    public void setTime(Date time) {
+        this.time = time;
+    }
 
+    public String getNote() {
+        return note;
+    }
 
-  public String getNote() {
-    return note;
-  }
+    public void setNote(String note) {
+        this.note = note;
+    }
 
-  public void setNote(String note) {
-    this.note = note;
-  }
+    public Integer getHistorymoney() {
+        return historymoney;
+    }
 
-
-  public long getHistorymoney() {
-    return historymoney;
-  }
-
-  public void setHistorymoney(long historymoney) {
-    this.historymoney = historymoney;
-  }
-
+    public void setHistorymoney(Integer historymoney) {
+        this.historymoney = historymoney;
+    }
 }

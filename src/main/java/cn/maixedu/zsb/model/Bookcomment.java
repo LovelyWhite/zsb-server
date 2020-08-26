@@ -1,67 +1,65 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
 
-public class Bookcomment {
+public class BookComment {
+    private Integer id;
 
-  private long id;
-  private long userid;
-  private long bookid;
-  private java.sql.Timestamp time;
-  private long score;
-  private String comment;
+    private Integer userid;
 
+    private Integer bookid;
 
-  public long getId() {
-    return id;
-  }
+    private Date time;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private Integer score;
 
+    private String comment;
 
-  public long getUserid() {
-    return userid;
-  }
+    public Integer getId() {
+        return id;
+    }
 
-  public void setUserid(long userid) {
-    this.userid = userid;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
+    public Integer getUserid() {
+        return userid;
+    }
 
-  public long getBookid() {
-    return bookid;
-  }
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
 
-  public void setBookid(long bookid) {
-    this.bookid = bookid;
-  }
+    public Integer getBookid() {
+        return bookid;
+    }
 
+    public void setBookid(Integer bookid) {
+        this.bookid = bookid;
+    }
 
-  public java.sql.Timestamp getTime() {
-    return time;
-  }
+    public Date getTime() {
+        return time;
+    }
 
-  public void setTime(java.sql.Timestamp time) {
-    this.time = time;
-  }
+    public void setTime(Date time) {
+        this.time = time;
+    }
 
+    public Integer getScore() {
+        return score;
+    }
 
-  public long getScore() {
-    return score;
-  }
+    public void setScore(Integer score) {
+        this.score = score;
+    }
 
-  public void setScore(long score) {
-    this.score = score;
-  }
+    public String getComment() {
+        return comment;
+    }
 
-
-  public String getComment() {
-    return comment;
-  }
-
-  public void setComment(String comment) {
-    this.comment = comment;
-  }
-
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }

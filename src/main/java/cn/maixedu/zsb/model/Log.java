@@ -1,47 +1,45 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
 
 public class Log {
+    private Integer id;
 
-  private long id;
-  private long userid;
-  private java.sql.Timestamp time;
-  private String log;
+    private Integer userid;
 
+    private Date time;
 
-  public long getId() {
-    return id;
-  }
+    private String log;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public long getUserid() {
-    return userid;
-  }
+    public Integer getUserid() {
+        return userid;
+    }
 
-  public void setUserid(long userid) {
-    this.userid = userid;
-  }
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
 
+    public Date getTime() {
+        return time;
+    }
 
-  public java.sql.Timestamp getTime() {
-    return time;
-  }
+    public void setTime(Date time) {
+        this.time = time;
+    }
 
-  public void setTime(java.sql.Timestamp time) {
-    this.time = time;
-  }
+    public String getLog() {
+        return log;
+    }
 
-
-  public String getLog() {
-    return log;
-  }
-
-  public void setLog(String log) {
-    this.log = log;
-  }
-
+    public void setLog(String log) {
+        this.log = log;
+    }
 }

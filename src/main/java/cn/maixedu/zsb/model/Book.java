@@ -1,77 +1,73 @@
 package cn.maixedu.zsb.model;
 
-
 public class Book {
+    private Integer id;
 
-  private long id;
-  private long bookkindid;
-  private long priceid;
-  private String name;
-  private String press;
-  private String isbn;
-  private String poster;
+    private Integer bookkindid;
 
+    private Integer priceid;
 
-  public long getId() {
-    return id;
-  }
+    private String name;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private String press;
 
+    private String isbn;
 
-  public long getBookkindid() {
-    return bookkindid;
-  }
+    private String poster;
 
-  public void setBookkindid(long bookkindid) {
-    this.bookkindid = bookkindid;
-  }
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public long getPriceid() {
-    return priceid;
-  }
+    public Integer getBookkindid() {
+        return bookkindid;
+    }
 
-  public void setPriceid(long priceid) {
-    this.priceid = priceid;
-  }
+    public void setBookkindid(Integer bookkindid) {
+        this.bookkindid = bookkindid;
+    }
 
+    public Integer getPriceid() {
+        return priceid;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public void setPriceid(Integer priceid) {
+        this.priceid = priceid;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public String getPress() {
-    return press;
-  }
+    public String getPress() {
+        return press;
+    }
 
-  public void setPress(String press) {
-    this.press = press;
-  }
+    public void setPress(String press) {
+        this.press = press;
+    }
 
+    public String getIsbn() {
+        return isbn;
+    }
 
-  public String getIsbn() {
-    return isbn;
-  }
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
-  public void setIsbn(String isbn) {
-    this.isbn = isbn;
-  }
+    public String getPoster() {
+        return poster;
+    }
 
-
-  public String getPoster() {
-    return poster;
-  }
-
-  public void setPoster(String poster) {
-    this.poster = poster;
-  }
-
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
 }

@@ -1,37 +1,33 @@
 package cn.maixedu.zsb.model;
 
+public class BankWithQuestion {
+    private Integer id;
 
-public class Bankwithquestion {
+    private Integer questionbankid;
 
-  private long id;
-  private long questionbankid;
-  private long questionid;
+    private Integer questionid;
 
+    public Integer getId() {
+        return id;
+    }
 
-  public long getId() {
-    return id;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public Integer getQuestionbankid() {
+        return questionbankid;
+    }
 
+    public void setQuestionbankid(Integer questionbankid) {
+        this.questionbankid = questionbankid;
+    }
 
-  public long getQuestionbankid() {
-    return questionbankid;
-  }
+    public Integer getQuestionid() {
+        return questionid;
+    }
 
-  public void setQuestionbankid(long questionbankid) {
-    this.questionbankid = questionbankid;
-  }
-
-
-  public long getQuestionid() {
-    return questionid;
-  }
-
-  public void setQuestionid(long questionid) {
-    this.questionid = questionid;
-  }
-
+    public void setQuestionid(Integer questionid) {
+        this.questionid = questionid;
+    }
 }

@@ -1,77 +1,75 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
 
 public class Order {
+    private Integer id;
 
-  private long id;
-  private long userid;
-  private String status;
-  private java.sql.Timestamp ordertime;
-  private java.sql.Timestamp paytime;
-  private String comment;
-  private long socre;
+    private Integer userid;
 
+    private String status;
 
-  public long getId() {
-    return id;
-  }
+    private Date ordertime;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private Date paytime;
 
+    private String comment;
 
-  public long getUserid() {
-    return userid;
-  }
+    private Integer socre;
 
-  public void setUserid(long userid) {
-    this.userid = userid;
-  }
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public String getStatus() {
-    return status;
-  }
+    public Integer getUserid() {
+        return userid;
+    }
 
-  public void setStatus(String status) {
-    this.status = status;
-  }
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
 
+    public String getStatus() {
+        return status;
+    }
 
-  public java.sql.Timestamp getOrdertime() {
-    return ordertime;
-  }
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-  public void setOrdertime(java.sql.Timestamp ordertime) {
-    this.ordertime = ordertime;
-  }
+    public Date getOrdertime() {
+        return ordertime;
+    }
 
+    public void setOrdertime(Date ordertime) {
+        this.ordertime = ordertime;
+    }
 
-  public java.sql.Timestamp getPaytime() {
-    return paytime;
-  }
+    public Date getPaytime() {
+        return paytime;
+    }
 
-  public void setPaytime(java.sql.Timestamp paytime) {
-    this.paytime = paytime;
-  }
+    public void setPaytime(Date paytime) {
+        this.paytime = paytime;
+    }
 
+    public String getComment() {
+        return comment;
+    }
 
-  public String getComment() {
-    return comment;
-  }
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
-  public void setComment(String comment) {
-    this.comment = comment;
-  }
+    public Integer getSocre() {
+        return socre;
+    }
 
-
-  public long getSocre() {
-    return socre;
-  }
-
-  public void setSocre(long socre) {
-    this.socre = socre;
-  }
-
+    public void setSocre(Integer socre) {
+        this.socre = socre;
+    }
 }

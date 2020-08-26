@@ -1,127 +1,125 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
 
-public class Questionbank {
+public class QuestionBank {
+    private Integer id;
 
-  private long id;
-  private long questionbanktypeid;
-  private long fsubjectid;
-  private long ssubjectid;
-  private String city;
-  private long priceid;
-  private String name;
-  private java.sql.Timestamp anticipatetime;
-  private java.sql.Timestamp updatetime;
-  private long prefectscore;
-  private long passscore;
-  private String intro;
+    private Integer questionbanktypeid;
 
+    private Integer fsubjectid;
 
-  public long getId() {
-    return id;
-  }
+    private Integer ssubjectid;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private String city;
 
+    private Integer priceid;
 
-  public long getQuestionbanktypeid() {
-    return questionbanktypeid;
-  }
+    private String name;
 
-  public void setQuestionbanktypeid(long questionbanktypeid) {
-    this.questionbanktypeid = questionbanktypeid;
-  }
+    private Date anticipatetime;
 
+    private Date updatetime;
 
-  public long getFsubjectid() {
-    return fsubjectid;
-  }
+    private Integer prefectscore;
 
-  public void setFsubjectid(long fsubjectid) {
-    this.fsubjectid = fsubjectid;
-  }
+    private Integer passscore;
 
+    private String intro;
 
-  public long getSsubjectid() {
-    return ssubjectid;
-  }
+    public Integer getId() {
+        return id;
+    }
 
-  public void setSsubjectid(long ssubjectid) {
-    this.ssubjectid = ssubjectid;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
+    public Integer getQuestionbanktypeid() {
+        return questionbanktypeid;
+    }
 
-  public String getCity() {
-    return city;
-  }
+    public void setQuestionbanktypeid(Integer questionbanktypeid) {
+        this.questionbanktypeid = questionbanktypeid;
+    }
 
-  public void setCity(String city) {
-    this.city = city;
-  }
+    public Integer getFsubjectid() {
+        return fsubjectid;
+    }
 
+    public void setFsubjectid(Integer fsubjectid) {
+        this.fsubjectid = fsubjectid;
+    }
 
-  public long getPriceid() {
-    return priceid;
-  }
+    public Integer getSsubjectid() {
+        return ssubjectid;
+    }
 
-  public void setPriceid(long priceid) {
-    this.priceid = priceid;
-  }
+    public void setSsubjectid(Integer ssubjectid) {
+        this.ssubjectid = ssubjectid;
+    }
 
+    public String getCity() {
+        return city;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public Integer getPriceid() {
+        return priceid;
+    }
 
+    public void setPriceid(Integer priceid) {
+        this.priceid = priceid;
+    }
 
-  public java.sql.Timestamp getAnticipatetime() {
-    return anticipatetime;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setAnticipatetime(java.sql.Timestamp anticipatetime) {
-    this.anticipatetime = anticipatetime;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public Date getAnticipatetime() {
+        return anticipatetime;
+    }
 
-  public java.sql.Timestamp getUpdatetime() {
-    return updatetime;
-  }
+    public void setAnticipatetime(Date anticipatetime) {
+        this.anticipatetime = anticipatetime;
+    }
 
-  public void setUpdatetime(java.sql.Timestamp updatetime) {
-    this.updatetime = updatetime;
-  }
+    public Date getUpdatetime() {
+        return updatetime;
+    }
 
+    public void setUpdatetime(Date updatetime) {
+        this.updatetime = updatetime;
+    }
 
-  public long getPrefectscore() {
-    return prefectscore;
-  }
+    public Integer getPrefectscore() {
+        return prefectscore;
+    }
 
-  public void setPrefectscore(long prefectscore) {
-    this.prefectscore = prefectscore;
-  }
+    public void setPrefectscore(Integer prefectscore) {
+        this.prefectscore = prefectscore;
+    }
 
+    public Integer getPassscore() {
+        return passscore;
+    }
 
-  public long getPassscore() {
-    return passscore;
-  }
+    public void setPassscore(Integer passscore) {
+        this.passscore = passscore;
+    }
 
-  public void setPassscore(long passscore) {
-    this.passscore = passscore;
-  }
+    public String getIntro() {
+        return intro;
+    }
 
-
-  public String getIntro() {
-    return intro;
-  }
-
-  public void setIntro(String intro) {
-    this.intro = intro;
-  }
-
+    public void setIntro(String intro) {
+        this.intro = intro;
+    }
 }

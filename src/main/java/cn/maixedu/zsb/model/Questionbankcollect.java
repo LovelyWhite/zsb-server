@@ -1,47 +1,45 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
 
-public class Questionbankcollect {
+public class QuestionBankCollect {
+    private Integer id;
 
-  private long id;
-  private long userid;
-  private long questionbankid;
-  private java.sql.Timestamp time;
+    private Integer userid;
 
+    private Integer questionbankid;
 
-  public long getId() {
-    return id;
-  }
+    private Date time;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public long getUserid() {
-    return userid;
-  }
+    public Integer getUserid() {
+        return userid;
+    }
 
-  public void setUserid(long userid) {
-    this.userid = userid;
-  }
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
 
+    public Integer getQuestionbankid() {
+        return questionbankid;
+    }
 
-  public long getQuestionbankid() {
-    return questionbankid;
-  }
+    public void setQuestionbankid(Integer questionbankid) {
+        this.questionbankid = questionbankid;
+    }
 
-  public void setQuestionbankid(long questionbankid) {
-    this.questionbankid = questionbankid;
-  }
+    public Date getTime() {
+        return time;
+    }
 
-
-  public java.sql.Timestamp getTime() {
-    return time;
-  }
-
-  public void setTime(java.sql.Timestamp time) {
-    this.time = time;
-  }
-
+    public void setTime(Date time) {
+        this.time = time;
+    }
 }

@@ -1,77 +1,75 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
 
-public class Answerrecord {
+public class AnswerRecord {
+    private Integer id;
 
-  private long id;
-  private long userid;
-  private long questionbankid;
-  private long costtime;
-  private java.sql.Timestamp ansertime;
-  private long gotsocre;
-  private long socre;
+    private Integer userid;
 
+    private Integer questionbankid;
 
-  public long getId() {
-    return id;
-  }
+    private Integer costtime;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private Date ansertime;
 
+    private Integer gotsocre;
 
-  public long getUserid() {
-    return userid;
-  }
+    private Integer socre;
 
-  public void setUserid(long userid) {
-    this.userid = userid;
-  }
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public long getQuestionbankid() {
-    return questionbankid;
-  }
+    public Integer getUserid() {
+        return userid;
+    }
 
-  public void setQuestionbankid(long questionbankid) {
-    this.questionbankid = questionbankid;
-  }
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
 
+    public Integer getQuestionbankid() {
+        return questionbankid;
+    }
 
-  public long getCosttime() {
-    return costtime;
-  }
+    public void setQuestionbankid(Integer questionbankid) {
+        this.questionbankid = questionbankid;
+    }
 
-  public void setCosttime(long costtime) {
-    this.costtime = costtime;
-  }
+    public Integer getCosttime() {
+        return costtime;
+    }
 
+    public void setCosttime(Integer costtime) {
+        this.costtime = costtime;
+    }
 
-  public java.sql.Timestamp getAnsertime() {
-    return ansertime;
-  }
+    public Date getAnsertime() {
+        return ansertime;
+    }
 
-  public void setAnsertime(java.sql.Timestamp ansertime) {
-    this.ansertime = ansertime;
-  }
+    public void setAnsertime(Date ansertime) {
+        this.ansertime = ansertime;
+    }
 
+    public Integer getGotsocre() {
+        return gotsocre;
+    }
 
-  public long getGotsocre() {
-    return gotsocre;
-  }
+    public void setGotsocre(Integer gotsocre) {
+        this.gotsocre = gotsocre;
+    }
 
-  public void setGotsocre(long gotsocre) {
-    this.gotsocre = gotsocre;
-  }
+    public Integer getSocre() {
+        return socre;
+    }
 
-
-  public long getSocre() {
-    return socre;
-  }
-
-  public void setSocre(long socre) {
-    this.socre = socre;
-  }
-
+    public void setSocre(Integer socre) {
+        this.socre = socre;
+    }
 }

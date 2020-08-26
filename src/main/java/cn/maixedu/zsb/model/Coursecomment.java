@@ -1,67 +1,65 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
 
-public class Coursecomment {
+public class CourseComment {
+    private Integer id;
 
-  private long id;
-  private long userid;
-  private long courseid;
-  private long score;
-  private java.sql.Timestamp time;
-  private String comment;
+    private Integer userid;
 
+    private Integer courseid;
 
-  public long getId() {
-    return id;
-  }
+    private Integer score;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private Date time;
 
+    private String comment;
 
-  public long getUserid() {
-    return userid;
-  }
+    public Integer getId() {
+        return id;
+    }
 
-  public void setUserid(long userid) {
-    this.userid = userid;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
+    public Integer getUserid() {
+        return userid;
+    }
 
-  public long getCourseid() {
-    return courseid;
-  }
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
 
-  public void setCourseid(long courseid) {
-    this.courseid = courseid;
-  }
+    public Integer getCourseid() {
+        return courseid;
+    }
 
+    public void setCourseid(Integer courseid) {
+        this.courseid = courseid;
+    }
 
-  public long getScore() {
-    return score;
-  }
+    public Integer getScore() {
+        return score;
+    }
 
-  public void setScore(long score) {
-    this.score = score;
-  }
+    public void setScore(Integer score) {
+        this.score = score;
+    }
 
+    public Date getTime() {
+        return time;
+    }
 
-  public java.sql.Timestamp getTime() {
-    return time;
-  }
+    public void setTime(Date time) {
+        this.time = time;
+    }
 
-  public void setTime(java.sql.Timestamp time) {
-    this.time = time;
-  }
+    public String getComment() {
+        return comment;
+    }
 
-
-  public String getComment() {
-    return comment;
-  }
-
-  public void setComment(String comment) {
-    this.comment = comment;
-  }
-
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }

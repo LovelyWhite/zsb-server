@@ -1,47 +1,43 @@
 package cn.maixedu.zsb.model;
 
+public class NoteLike {
+    private Integer id;
 
-public class Notelike {
+    private Integer userid;
 
-  private long id;
-  private long userid;
-  private long questionnoteid;
-  private String status;
+    private Integer questionnoteid;
 
+    private String status;
 
-  public long getId() {
-    return id;
-  }
+    public Integer getId() {
+        return id;
+    }
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
+    public Integer getUserid() {
+        return userid;
+    }
 
-  public long getUserid() {
-    return userid;
-  }
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
 
-  public void setUserid(long userid) {
-    this.userid = userid;
-  }
+    public Integer getQuestionnoteid() {
+        return questionnoteid;
+    }
 
+    public void setQuestionnoteid(Integer questionnoteid) {
+        this.questionnoteid = questionnoteid;
+    }
 
-  public long getQuestionnoteid() {
-    return questionnoteid;
-  }
+    public String getStatus() {
+        return status;
+    }
 
-  public void setQuestionnoteid(long questionnoteid) {
-    this.questionnoteid = questionnoteid;
-  }
-
-
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

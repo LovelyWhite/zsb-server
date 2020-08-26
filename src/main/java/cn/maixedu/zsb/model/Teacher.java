@@ -1,37 +1,33 @@
 package cn.maixedu.zsb.model;
 
-
 public class Teacher {
+    private Integer id;
 
-  private long id;
-  private String name;
-  private String intro;
+    private String name;
 
+    private byte[] intro;
 
-  public long getId() {
-    return id;
-  }
+    public Integer getId() {
+        return id;
+    }
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
+    public String getName() {
+        return name;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public byte[] getIntro() {
+        return intro;
+    }
 
-
-  public String getIntro() {
-    return intro;
-  }
-
-  public void setIntro(String intro) {
-    this.intro = intro;
-  }
-
+    public void setIntro(byte[] intro) {
+        this.intro = intro;
+    }
 }

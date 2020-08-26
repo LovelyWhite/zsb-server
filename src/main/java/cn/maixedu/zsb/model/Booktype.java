@@ -1,27 +1,23 @@
 package cn.maixedu.zsb.model;
 
+public class BookType {
+    private Integer id;
 
-public class Booktype {
+    private String name;
 
-  private long id;
-  private String name;
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public long getId() {
-    return id;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setId(long id) {
-    this.id = id;
-  }
-
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
+    public void setName(String name) {
+        this.name = name;
+    }
 }

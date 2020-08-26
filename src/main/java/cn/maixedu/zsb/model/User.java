@@ -1,227 +1,225 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
 
 public class User {
+    private Integer id;
 
-  private long id;
-  private String account;
-  private String password;
-  private String sex;
-  private String avater;
-  private long age;
-  private String nickname;
-  private long usertypeid;
-  private java.sql.Timestamp regtime;
-  private java.sql.Timestamp updatetime;
-  private long recommendid;
-  private String realname;
-  private String idcardnum;
-  private java.sql.Timestamp birthday;
-  private String ban;
-  private String qus;
-  private String qusans;
-  private String tel;
-  private String email;
-  private String qq;
-  private String wechat;
-  private long learning2Id;
+    private String account;
 
+    private String password;
 
-  public long getId() {
-    return id;
-  }
+    private String sex;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private String avater;
 
+    private Integer age;
 
-  public String getAccount() {
-    return account;
-  }
+    private String nickname;
 
-  public void setAccount(String account) {
-    this.account = account;
-  }
+    private Integer usertypeid;
 
+    private Date regtime;
 
-  public String getPassword() {
-    return password;
-  }
+    private Date updatetime;
 
-  public void setPassword(String password) {
-    this.password = password;
-  }
+    private Integer recommendid;
 
+    private String realname;
 
-  public String getSex() {
-    return sex;
-  }
+    private String idcardnum;
 
-  public void setSex(String sex) {
-    this.sex = sex;
-  }
+    private Date birthday;
 
+    private String ban;
 
-  public String getAvater() {
-    return avater;
-  }
+    private String qus;
 
-  public void setAvater(String avater) {
-    this.avater = avater;
-  }
+    private String qusans;
 
+    private String tel;
 
-  public long getAge() {
-    return age;
-  }
+    private String email;
 
-  public void setAge(long age) {
-    this.age = age;
-  }
+    private String qq;
 
+    private String wechat;
 
-  public String getNickname() {
-    return nickname;
-  }
+    private Integer learning2id;
 
-  public void setNickname(String nickname) {
-    this.nickname = nickname;
-  }
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public long getUsertypeid() {
-    return usertypeid;
-  }
+    public String getAccount() {
+        return account;
+    }
 
-  public void setUsertypeid(long usertypeid) {
-    this.usertypeid = usertypeid;
-  }
+    public void setAccount(String account) {
+        this.account = account;
+    }
 
+    public String getPassword() {
+        return password;
+    }
 
-  public java.sql.Timestamp getRegtime() {
-    return regtime;
-  }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-  public void setRegtime(java.sql.Timestamp regtime) {
-    this.regtime = regtime;
-  }
+    public String getSex() {
+        return sex;
+    }
 
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 
-  public java.sql.Timestamp getUpdatetime() {
-    return updatetime;
-  }
+    public String getAvater() {
+        return avater;
+    }
 
-  public void setUpdatetime(java.sql.Timestamp updatetime) {
-    this.updatetime = updatetime;
-  }
+    public void setAvater(String avater) {
+        this.avater = avater;
+    }
 
+    public Integer getAge() {
+        return age;
+    }
 
-  public long getRecommendid() {
-    return recommendid;
-  }
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 
-  public void setRecommendid(long recommendid) {
-    this.recommendid = recommendid;
-  }
+    public String getNickname() {
+        return nickname;
+    }
 
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
 
-  public String getRealname() {
-    return realname;
-  }
-
-  public void setRealname(String realname) {
-    this.realname = realname;
-  }
-
-
-  public String getIdcardnum() {
-    return idcardnum;
-  }
-
-  public void setIdcardnum(String idcardnum) {
-    this.idcardnum = idcardnum;
-  }
-
-
-  public java.sql.Timestamp getBirthday() {
-    return birthday;
-  }
-
-  public void setBirthday(java.sql.Timestamp birthday) {
-    this.birthday = birthday;
-  }
-
-
-  public String getBan() {
-    return ban;
-  }
-
-  public void setBan(String ban) {
-    this.ban = ban;
-  }
-
-
-  public String getQus() {
-    return qus;
-  }
-
-  public void setQus(String qus) {
-    this.qus = qus;
-  }
-
-
-  public String getQusans() {
-    return qusans;
-  }
-
-  public void setQusans(String qusans) {
-    this.qusans = qusans;
-  }
-
-
-  public String getTel() {
-    return tel;
-  }
-
-  public void setTel(String tel) {
-    this.tel = tel;
-  }
-
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-
-  public String getQq() {
-    return qq;
-  }
-
-  public void setQq(String qq) {
-    this.qq = qq;
-  }
-
-
-  public String getWechat() {
-    return wechat;
-  }
-
-  public void setWechat(String wechat) {
-    this.wechat = wechat;
-  }
-
-
-  public long getLearning2Id() {
-    return learning2Id;
-  }
-
-  public void setLearning2Id(long learning2Id) {
-    this.learning2Id = learning2Id;
-  }
-
+    public Integer getUsertypeid() {
+        return usertypeid;
+    }
+
+    public void setUsertypeid(Integer usertypeid) {
+        this.usertypeid = usertypeid;
+    }
+
+    public Date getRegtime() {
+        return regtime;
+    }
+
+    public void setRegtime(Date regtime) {
+        this.regtime = regtime;
+    }
+
+    public Date getUpdatetime() {
+        return updatetime;
+    }
+
+    public void setUpdatetime(Date updatetime) {
+        this.updatetime = updatetime;
+    }
+
+    public Integer getRecommendid() {
+        return recommendid;
+    }
+
+    public void setRecommendid(Integer recommendid) {
+        this.recommendid = recommendid;
+    }
+
+    public String getRealname() {
+        return realname;
+    }
+
+    public void setRealname(String realname) {
+        this.realname = realname;
+    }
+
+    public String getIdcardnum() {
+        return idcardnum;
+    }
+
+    public void setIdcardnum(String idcardnum) {
+        this.idcardnum = idcardnum;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getBan() {
+        return ban;
+    }
+
+    public void setBan(String ban) {
+        this.ban = ban;
+    }
+
+    public String getQus() {
+        return qus;
+    }
+
+    public void setQus(String qus) {
+        this.qus = qus;
+    }
+
+    public String getQusans() {
+        return qusans;
+    }
+
+    public void setQusans(String qusans) {
+        this.qusans = qusans;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getQq() {
+        return qq;
+    }
+
+    public void setQq(String qq) {
+        this.qq = qq;
+    }
+
+    public String getWechat() {
+        return wechat;
+    }
+
+    public void setWechat(String wechat) {
+        this.wechat = wechat;
+    }
+
+    public Integer getLearning2id() {
+        return learning2id;
+    }
+
+    public void setLearning2id(Integer learning2id) {
+        this.learning2id = learning2id;
+    }
 }

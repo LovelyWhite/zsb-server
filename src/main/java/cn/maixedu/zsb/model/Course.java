@@ -1,57 +1,53 @@
 package cn.maixedu.zsb.model;
 
-
 public class Course {
+    private Integer id;
 
-  private long id;
-  private long teacherid;
-  private long priceid;
-  private String name;
-  private String intro;
+    private Integer teacherid;
 
+    private Integer priceid;
 
-  public long getId() {
-    return id;
-  }
+    private String name;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private byte[] intro;
 
+    public Integer getId() {
+        return id;
+    }
 
-  public long getTeacherid() {
-    return teacherid;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public void setTeacherid(long teacherid) {
-    this.teacherid = teacherid;
-  }
+    public Integer getTeacherid() {
+        return teacherid;
+    }
 
+    public void setTeacherid(Integer teacherid) {
+        this.teacherid = teacherid;
+    }
 
-  public long getPriceid() {
-    return priceid;
-  }
+    public Integer getPriceid() {
+        return priceid;
+    }
 
-  public void setPriceid(long priceid) {
-    this.priceid = priceid;
-  }
+    public void setPriceid(Integer priceid) {
+        this.priceid = priceid;
+    }
 
+    public String getName() {
+        return name;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public byte[] getIntro() {
+        return intro;
+    }
 
-
-  public String getIntro() {
-    return intro;
-  }
-
-  public void setIntro(String intro) {
-    this.intro = intro;
-  }
-
+    public void setIntro(byte[] intro) {
+        this.intro = intro;
+    }
 }

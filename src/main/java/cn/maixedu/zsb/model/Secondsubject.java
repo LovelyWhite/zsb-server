@@ -1,57 +1,53 @@
 package cn.maixedu.zsb.model;
 
+public class SecondSubject {
+    private Integer id;
 
-public class Secondsubject {
+    private Integer firstsubjectid;
 
-  private long id;
-  private long firstsubjectid;
-  private String name;
-  private String code;
-  private String hascity;
+    private String name;
 
+    private String code;
 
-  public long getId() {
-    return id;
-  }
+    private String hascity;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public long getFirstsubjectid() {
-    return firstsubjectid;
-  }
+    public Integer getFirstsubjectid() {
+        return firstsubjectid;
+    }
 
-  public void setFirstsubjectid(long firstsubjectid) {
-    this.firstsubjectid = firstsubjectid;
-  }
+    public void setFirstsubjectid(Integer firstsubjectid) {
+        this.firstsubjectid = firstsubjectid;
+    }
 
+    public String getName() {
+        return name;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public String getCode() {
+        return code;
+    }
 
+    public void setCode(String code) {
+        this.code = code;
+    }
 
-  public String getCode() {
-    return code;
-  }
+    public String getHascity() {
+        return hascity;
+    }
 
-  public void setCode(String code) {
-    this.code = code;
-  }
-
-
-  public String getHascity() {
-    return hascity;
-  }
-
-  public void setHascity(String hascity) {
-    this.hascity = hascity;
-  }
-
+    public void setHascity(String hascity) {
+        this.hascity = hascity;
+    }
 }
