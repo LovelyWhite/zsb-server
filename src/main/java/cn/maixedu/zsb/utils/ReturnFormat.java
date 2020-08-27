@@ -1,7 +1,11 @@
 package cn.maixedu.zsb.utils;
 
 import com.alibaba.fastjson.JSON;
-
+/**
+ * @Description: 定义返回格式，调用了JSON将Object转化为Json String
+ * @Author:lw
+ * @Date:2020/8/28
+ */
 public class ReturnFormat {
     private int code;
     private Object object;

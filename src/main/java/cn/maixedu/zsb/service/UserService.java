@@ -6,7 +6,11 @@ import cn.maixedu.zsb.model.UserExample;
 import cn.maixedu.zsb.utils.Code;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+/**
+ * @Description: 用户Service层
+ * @Author:lw
+ * @Date:2020/8/28
+ */
 @Service
 public class UserService {
     @Autowired

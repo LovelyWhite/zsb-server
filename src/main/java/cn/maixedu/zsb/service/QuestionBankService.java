@@ -6,7 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+/**
+ * @Description: 题库service层
+ * @Author:lw
+ * @Date:2020/8/28
+ */
 @Service
 public class QuestionBankService {
     @Autowired

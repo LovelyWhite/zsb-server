@@ -9,6 +9,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+/**
+ * @Description: 用户控制器，用于所有与用户有关的操作
+ * @Author:lw
+ * @Date:2020/8/28
+ */
 
 @Controller
 @RequestMapping("/user")
