@@ -2,7 +2,7 @@ package cn.maixedu.zsb.model;
 
 import java.util.Date;
 
-public class QuestioNote {
+public class QuestionNote {
     private Integer id;
 
     private Integer userid;

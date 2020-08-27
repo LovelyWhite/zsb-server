@@ -40,7 +40,7 @@
         <table tableName="questionbankcollect"  domainObjectName="QuestionBankCollect"/>
         <table tableName="questionbankcomment"  domainObjectName="QuestionBankComment"/>
         <table tableName="questionbanktype"  domainObjectName="QuestionBankType"/>
-        <table tableName="questionnote"  domainObjectName="QuestioNote"/>
+        <table tableName="questionnote"  domainObjectName="QuestionNote"/>
         <table tableName="secondsubject"  domainObjectName="SecondSubject"/>
         <table tableName="teacher"  domainObjectName="Teacher"/>
         <table tableName="user"  domainObjectName="User"/>
