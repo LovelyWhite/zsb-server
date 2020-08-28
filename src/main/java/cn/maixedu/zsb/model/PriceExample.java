@@ -1,16 +1,17 @@
 package cn.maixedu.zsb.model;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CdkExample {
+public class PriceExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public CdkExample() {
+    public PriceExample() {
         oredCriteria = new ArrayList<>();
     }
 
@@ -164,203 +165,123 @@ public class CdkExample {
             return (Criteria) this;
         }
 
-        public Criteria andCdkIsNull() {
-            addCriterion("CDK is null");
+        public Criteria andPriceIsNull() {
+            addCriterion("price is null");
             return (Criteria) this;
         }
 
-        public Criteria andCdkIsNotNull() {
-            addCriterion("CDK is not null");
+        public Criteria andPriceIsNotNull() {
+            addCriterion("price is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCdkEqualTo(String value) {
-            addCriterion("CDK =", value, "cdk");
+        public Criteria andPriceEqualTo(BigDecimal value) {
+            addCriterion("price =", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkNotEqualTo(String value) {
-            addCriterion("CDK <>", value, "cdk");
+        public Criteria andPriceNotEqualTo(BigDecimal value) {
+            addCriterion("price <>", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkGreaterThan(String value) {
-            addCriterion("CDK >", value, "cdk");
+        public Criteria andPriceGreaterThan(BigDecimal value) {
+            addCriterion("price >", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkGreaterThanOrEqualTo(String value) {
-            addCriterion("CDK >=", value, "cdk");
+        public Criteria andPriceGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("price >=", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkLessThan(String value) {
-            addCriterion("CDK <", value, "cdk");
+        public Criteria andPriceLessThan(BigDecimal value) {
+            addCriterion("price <", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkLessThanOrEqualTo(String value) {
-            addCriterion("CDK <=", value, "cdk");
+        public Criteria andPriceLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("price <=", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkLike(String value) {
-            addCriterion("CDK like", value, "cdk");
+        public Criteria andPriceIn(List<BigDecimal> values) {
+            addCriterion("price in", values, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkNotLike(String value) {
-            addCriterion("CDK not like", value, "cdk");
+        public Criteria andPriceNotIn(List<BigDecimal> values) {
+            addCriterion("price not in", values, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkIn(List<String> values) {
-            addCriterion("CDK in", values, "cdk");
+        public Criteria andPriceBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("price between", value1, value2, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkNotIn(List<String> values) {
-            addCriterion("CDK not in", values, "cdk");
+        public Criteria andPriceNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("price not between", value1, value2, "price");
             return (Criteria) this;
         }
 
-        public Criteria andCdkBetween(String value1, String value2) {
-            addCriterion("CDK between", value1, value2, "cdk");
+        public Criteria andSuperpriceIsNull() {
+            addCriterion("superprice is null");
             return (Criteria) this;
         }
 
-        public Criteria andCdkNotBetween(String value1, String value2) {
-            addCriterion("CDK not between", value1, value2, "cdk");
+        public Criteria andSuperpriceIsNotNull() {
+            addCriterion("superprice is not null");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidIsNull() {
-            addCriterion("goodid is null");
+        public Criteria andSuperpriceEqualTo(BigDecimal value) {
+            addCriterion("superprice =", value, "superprice");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidIsNotNull() {
-            addCriterion("goodid is not null");
+        public Criteria andSuperpriceNotEqualTo(BigDecimal value) {
+            addCriterion("superprice <>", value, "superprice");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidEqualTo(Integer value) {
-            addCriterion("goodid =", value, "goodid");
+        public Criteria andSuperpriceGreaterThan(BigDecimal value) {
+            addCriterion("superprice >", value, "superprice");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidNotEqualTo(Integer value) {
-            addCriterion("goodid <>", value, "goodid");
+        public Criteria andSuperpriceGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("superprice >=", value, "superprice");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidGreaterThan(Integer value) {
-            addCriterion("goodid >", value, "goodid");
+        public Criteria andSuperpriceLessThan(BigDecimal value) {
+            addCriterion("superprice <", value, "superprice");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("goodid >=", value, "goodid");
+        public Criteria andSuperpriceLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("superprice <=", value, "superprice");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidLessThan(Integer value) {
-            addCriterion("goodid <", value, "goodid");
+        public Criteria andSuperpriceIn(List<BigDecimal> values) {
+            addCriterion("superprice in", values, "superprice");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidLessThanOrEqualTo(Integer value) {
-            addCriterion("goodid <=", value, "goodid");
+        public Criteria andSuperpriceNotIn(List<BigDecimal> values) {
+            addCriterion("superprice not in", values, "superprice");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidIn(List<Integer> values) {
-            addCriterion("goodid in", values, "goodid");
+        public Criteria andSuperpriceBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("superprice between", value1, value2, "superprice");
             return (Criteria) this;
         }
 
-        public Criteria andGoodidNotIn(List<Integer> values) {
-            addCriterion("goodid not in", values, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidBetween(Integer value1, Integer value2) {
-            addCriterion("goodid between", value1, value2, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidNotBetween(Integer value1, Integer value2) {
-            addCriterion("goodid not between", value1, value2, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeIsNull() {
-            addCriterion("type is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeIsNotNull() {
-            addCriterion("type is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeEqualTo(String value) {
-            addCriterion("type =", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotEqualTo(String value) {
-            addCriterion("type <>", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeGreaterThan(String value) {
-            addCriterion("type >", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeGreaterThanOrEqualTo(String value) {
-            addCriterion("type >=", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeLessThan(String value) {
-            addCriterion("type <", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeLessThanOrEqualTo(String value) {
-            addCriterion("type <=", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeLike(String value) {
-            addCriterion("type like", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotLike(String value) {
-            addCriterion("type not like", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeIn(List<String> values) {
-            addCriterion("type in", values, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotIn(List<String> values) {
-            addCriterion("type not in", values, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeBetween(String value1, String value2) {
-            addCriterion("type between", value1, value2, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotBetween(String value1, String value2) {
-            addCriterion("type not between", value1, value2, "type");
+        public Criteria andSuperpriceNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("superprice not between", value1, value2, "superprice");
             return (Criteria) this;
         }
     }

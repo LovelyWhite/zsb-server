@@ -25,6 +25,7 @@
         <table tableName="book"  domainObjectName="Book"/>
         <table tableName="bookcomment"  domainObjectName="BookComment"/>
         <table tableName="booktype"  domainObjectName="BookType"/>
+        <table tableName="carousel"  domainObjectName="Carousel"/>
         <table tableName="cdk"  domainObjectName="Cdk"/>
         <table tableName="course"  domainObjectName="Course"/>
         <table tableName="coursecomment"  domainObjectName="CourseComment"/>
@@ -35,6 +36,7 @@
         <table tableName="notelike"  domainObjectName="NoteLike"/>
         <table tableName="order"  domainObjectName="Order"/>
         <table tableName="orderdetail"  domainObjectName="OrderDetail"/>
+        <table tableName="price"  domainObjectName="Price"/>
         <table tableName="question"  domainObjectName="Question"/>
         <table tableName="questionbank"  domainObjectName="QuestionBank"/>
         <table tableName="questionbankcollect"  domainObjectName="QuestionBankCollect"/>

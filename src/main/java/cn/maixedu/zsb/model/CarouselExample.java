@@ -3,14 +3,14 @@ package cn.maixedu.zsb.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CdkExample {
+public class CarouselExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public CdkExample() {
+    public CarouselExample() {
         oredCriteria = new ArrayList<>();
     }
 
@@ -164,203 +164,73 @@ public class CdkExample {
             return (Criteria) this;
         }
 
-        public Criteria andCdkIsNull() {
-            addCriterion("CDK is null");
+        public Criteria andAddressIsNull() {
+            addCriterion("address is null");
             return (Criteria) this;
         }
 
-        public Criteria andCdkIsNotNull() {
-            addCriterion("CDK is not null");
+        public Criteria andAddressIsNotNull() {
+            addCriterion("address is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCdkEqualTo(String value) {
-            addCriterion("CDK =", value, "cdk");
+        public Criteria andAddressEqualTo(String value) {
+            addCriterion("address =", value, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkNotEqualTo(String value) {
-            addCriterion("CDK <>", value, "cdk");
+        public Criteria andAddressNotEqualTo(String value) {
+            addCriterion("address <>", value, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkGreaterThan(String value) {
-            addCriterion("CDK >", value, "cdk");
+        public Criteria andAddressGreaterThan(String value) {
+            addCriterion("address >", value, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkGreaterThanOrEqualTo(String value) {
-            addCriterion("CDK >=", value, "cdk");
+        public Criteria andAddressGreaterThanOrEqualTo(String value) {
+            addCriterion("address >=", value, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkLessThan(String value) {
-            addCriterion("CDK <", value, "cdk");
+        public Criteria andAddressLessThan(String value) {
+            addCriterion("address <", value, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkLessThanOrEqualTo(String value) {
-            addCriterion("CDK <=", value, "cdk");
+        public Criteria andAddressLessThanOrEqualTo(String value) {
+            addCriterion("address <=", value, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkLike(String value) {
-            addCriterion("CDK like", value, "cdk");
+        public Criteria andAddressLike(String value) {
+            addCriterion("address like", value, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkNotLike(String value) {
-            addCriterion("CDK not like", value, "cdk");
+        public Criteria andAddressNotLike(String value) {
+            addCriterion("address not like", value, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkIn(List<String> values) {
-            addCriterion("CDK in", values, "cdk");
+        public Criteria andAddressIn(List<String> values) {
+            addCriterion("address in", values, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkNotIn(List<String> values) {
-            addCriterion("CDK not in", values, "cdk");
+        public Criteria andAddressNotIn(List<String> values) {
+            addCriterion("address not in", values, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkBetween(String value1, String value2) {
-            addCriterion("CDK between", value1, value2, "cdk");
+        public Criteria andAddressBetween(String value1, String value2) {
+            addCriterion("address between", value1, value2, "address");
             return (Criteria) this;
         }
 
-        public Criteria andCdkNotBetween(String value1, String value2) {
-            addCriterion("CDK not between", value1, value2, "cdk");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidIsNull() {
-            addCriterion("goodid is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidIsNotNull() {
-            addCriterion("goodid is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidEqualTo(Integer value) {
-            addCriterion("goodid =", value, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidNotEqualTo(Integer value) {
-            addCriterion("goodid <>", value, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidGreaterThan(Integer value) {
-            addCriterion("goodid >", value, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("goodid >=", value, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidLessThan(Integer value) {
-            addCriterion("goodid <", value, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidLessThanOrEqualTo(Integer value) {
-            addCriterion("goodid <=", value, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidIn(List<Integer> values) {
-            addCriterion("goodid in", values, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidNotIn(List<Integer> values) {
-            addCriterion("goodid not in", values, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidBetween(Integer value1, Integer value2) {
-            addCriterion("goodid between", value1, value2, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andGoodidNotBetween(Integer value1, Integer value2) {
-            addCriterion("goodid not between", value1, value2, "goodid");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeIsNull() {
-            addCriterion("type is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeIsNotNull() {
-            addCriterion("type is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeEqualTo(String value) {
-            addCriterion("type =", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotEqualTo(String value) {
-            addCriterion("type <>", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeGreaterThan(String value) {
-            addCriterion("type >", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeGreaterThanOrEqualTo(String value) {
-            addCriterion("type >=", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeLessThan(String value) {
-            addCriterion("type <", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeLessThanOrEqualTo(String value) {
-            addCriterion("type <=", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeLike(String value) {
-            addCriterion("type like", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotLike(String value) {
-            addCriterion("type not like", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeIn(List<String> values) {
-            addCriterion("type in", values, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotIn(List<String> values) {
-            addCriterion("type not in", values, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeBetween(String value1, String value2) {
-            addCriterion("type between", value1, value2, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotBetween(String value1, String value2) {
-            addCriterion("type not between", value1, value2, "type");
+        public Criteria andAddressNotBetween(String value1, String value2) {
+            addCriterion("address not between", value1, value2, "address");
             return (Criteria) this;
         }
     }

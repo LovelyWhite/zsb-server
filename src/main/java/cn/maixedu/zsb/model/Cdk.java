@@ -7,6 +7,8 @@ public class Cdk {
 
     private Integer goodid;
 
+    private String type;
+
     public Integer getId() {
         return id;
     }
@@ -29,5 +31,13 @@ public class Cdk {
 
     public void setGoodid(Integer goodid) {
         this.goodid = goodid;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

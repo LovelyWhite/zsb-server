@@ -11,7 +11,7 @@ public class User {
 
     private String sex;
 
-    private String avater;
+    private String avatar;
 
     private Integer age;
 
@@ -47,6 +47,8 @@ public class User {
 
     private Integer learning2id;
 
+    private String openid;
+
     public Integer getId() {
         return id;
     }
@@ -79,12 +81,12 @@ public class User {
         this.sex = sex;
     }
 
-    public String getAvater() {
-        return avater;
+    public String getAvatar() {
+        return avatar;
     }
 
-    public void setAvater(String avater) {
-        this.avater = avater;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public Integer getAge() {
@@ -221,5 +223,13 @@ public class User {
 
     public void setLearning2id(Integer learning2id) {
         this.learning2id = learning2id;
+    }
+
+    public String getOpenid() {
+        return openid;
+    }
+
+    public void setOpenid(String openid) {
+        this.openid = openid;
     }
 }
