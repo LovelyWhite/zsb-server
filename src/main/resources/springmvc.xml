@@ -27,7 +27,6 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 <!--        <mvc:resources location="/css/" mapping="/css/**" />-->
         <mvc:resources location="/img/" mapping="/images/**" />
 <!--        <mvc:resources location="/js/" mapping="/js/**" />-->
-<!--     开启对SpringMVC注解的支持-->
     <bean id="contentNegotiationManager"
           class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
         <property name="defaultContentType" value="application/json;charset=UTF-8" />
@@ -37,4 +36,15 @@ http://www.springframework.org/schema/context/spring-context.xsd">
             <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter"/>
         </mvc:message-converters>
     </mvc:annotation-driven>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 匹配的是url路径， 如果不配置或/**,将拦截所有的Controller -->
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/wechat/login" />
+            <mvc:exclude-mapping path="/questionbank/getalltype"/>
+            <mvc:exclude-mapping path="/images/**"/>
+            <bean class="cn.maixedu.zsb.interceptor.TokenInterceptor"/>
+        </mvc:interceptor>
+        <!-- 当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法 -->
+    </mvc:interceptors>
 </beans>
