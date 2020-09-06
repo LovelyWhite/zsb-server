@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="zsb-server:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/zsb_server_war</output-path>
+    <root id="archive" name="zsb-server_war.war">
+      <element id="artifact" artifact-name="zsb-server:war exploded" />
+    </root>
+  </artifact>
+</component>

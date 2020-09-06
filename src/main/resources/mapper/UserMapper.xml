@@ -26,6 +26,42 @@
     <result column="learning2id" jdbcType="INTEGER" property="learning2id" />
     <result column="openid" jdbcType="VARCHAR" property="openid" />
   </resultMap>
+  <resultMap id="BaseResultMapWithDetail" type="cn.maixedu.zsb.model.view.UserDetail">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="sex" jdbcType="CHAR" property="sex" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="usertypeid" jdbcType="INTEGER" property="usertypeid" />
+    <result column="regtime" jdbcType="TIMESTAMP" property="regtime" />
+    <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="recommendid" jdbcType="INTEGER" property="recommendid" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="idcardnum" jdbcType="VARCHAR" property="idcardnum" />
+    <result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+    <result column="ban" jdbcType="CHAR" property="ban" />
+    <result column="qus" jdbcType="VARCHAR" property="qus" />
+    <result column="qusans" jdbcType="VARCHAR" property="qusans" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+    <result column="wechat" jdbcType="VARCHAR" property="wechat" />
+    <result column="learning2id" jdbcType="INTEGER" property="learning2id" />
+    <result column="openid" jdbcType="VARCHAR" property="openid" />
+    <association property="usertype" javaType="cn.maixedu.zsb.model.UserType">
+      <id column="ut_id" jdbcType="INTEGER" property="id" />
+      <result column="ut_type" jdbcType="VARCHAR" property="type" />
+    </association>
+    <association property="secondsubject" javaType="cn.maixedu.zsb.model.SecondSubject">
+      <id column="sb_id" jdbcType="INTEGER" property="id" />
+      <result column="sb_firstsubjectid" jdbcType="INTEGER" property="firstsubjectid" />
+      <result column="sb_name" jdbcType="VARCHAR" property="name" />
+      <result column="sb_code" jdbcType="VARCHAR" property="code" />
+      <result column="sb_hascity" jdbcType="CHAR" property="hascity" />
+    </association>
+  </resultMap>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -89,6 +125,13 @@
     recommendid, realname, idcardnum, birthday, ban, qus, qusans, tel, email, qq, wechat, 
     learning2id, openid
   </sql>
+  <sql id="Base_Column_List_With_Detail">
+    user.id as id, account, password, sex, avatar, age, nickname, usertypeid, regtime, updatetime,
+    recommendid, realname, idcardnum, birthday, ban, qus, qusans, tel, email, qq, wechat,
+    learning2id, openid,usertype.id as ut_id,usertype.type as ut_type,secondsubject.id as sb_id,
+    secondsubject.firstsubjectid as sb_firstsubjectid,secondsubject.name as sb_name,secondsubject.code as sb_code,
+    secondsubject.hascity as sb_hascity
+  </sql>
   <select id="selectByExample" parameterType="cn.maixedu.zsb.model.UserExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -96,6 +139,25 @@
     </if>
     <include refid="Base_Column_List" />
     from user
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <!--  BaseResultMapWithDetail-->
+  <select id="selectByExampleWithDetail" parameterType="cn.maixedu.zsb.model.UserExample" resultMap="BaseResultMapWithDetail">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List_With_Detail" />
+    from user
+    left join usertype
+    on user.usertypeid=usertype.id
+    left join secondsubject
+    on user.learning2id =secondsubject.id
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>

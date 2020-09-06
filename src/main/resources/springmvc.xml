@@ -42,6 +42,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/wechat/login" />
             <mvc:exclude-mapping path="/questionbank/getalltype"/>
+            <mvc:exclude-mapping path="/subject/**"/>
             <mvc:exclude-mapping path="/images/**"/>
             <bean class="cn.maixedu.zsb.interceptor.TokenInterceptor"/>
         </mvc:interceptor>

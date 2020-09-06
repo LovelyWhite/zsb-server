@@ -1,4 +1,4 @@
-package cn.maixedu.zsb.utils;
+package cn.maixedu.zsb.model.view;
 
 import cn.maixedu.zsb.model.User;
 

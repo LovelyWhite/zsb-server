@@ -11,4 +11,5 @@ public class Code {
     public final static int RequestEmpty = 101;
     public final static int ResponseEmpty = 102;
     public final static int Exist = 103;
+    public final static int TokenExpired = 104;
 }

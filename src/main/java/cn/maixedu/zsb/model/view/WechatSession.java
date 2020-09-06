@@ -1,4 +1,4 @@
-package cn.maixedu.zsb.utils;
+package cn.maixedu.zsb.model.view;
 
 /**
  * @Description: code2session 返回的session

@@ -1,26 +1,26 @@
-package cn.maixedu.zsb.model;
+package cn.maixedu.zsb.model.view;
 
-public class SecondSubject {
+import cn.maixedu.zsb.model.SecondSubject;
+
+import java.util.List;
+
+/**
+ * @Description: 科目视图
+ * @Author:lw
+ * @Date:2020/9/6
+ */
+public class SubjectDetail {
     private Integer id;
 
     private Integer firstsubjectid;
 
-    private String name;
+    private String firstname;
+
+    private String secondname;
 
     private String code;
 
     private String hascity;
-
-    public SecondSubject() {
-    }
-
-    public SecondSubject(Integer id, Integer firstsubjectid, String name, String code, String hascity) {
-        this.id = id;
-        this.firstsubjectid = firstsubjectid;
-        this.name = name;
-        this.code = code;
-        this.hascity = hascity;
-    }
 
     public Integer getId() {
         return id;
@@ -38,12 +38,20 @@ public class SecondSubject {
         this.firstsubjectid = firstsubjectid;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getSecondname() {
+        return secondname;
+    }
+
+    public void setSecondname(String secondname) {
+        this.secondname = secondname;
     }
 
     public String getCode() {

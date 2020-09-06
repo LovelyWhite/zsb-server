@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cn.maixedu.zsb.model.User;
+import cn.maixedu.zsb.model.view.UserDetail;
 import cn.maixedu.zsb.utils.Code;
 import cn.maixedu.zsb.utils.Return;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -35,10 +36,10 @@ public class TokenInterceptor implements HandlerInterceptor {
         String token = request.getHeader("token");
         //token不存在
         if(null != token) {
-            User user = JWT.unsign(token, User.class);
+            UserDetail user = JWT.unsign(token, UserDetail.class);
             if(user == null){
                PrintWriter out =  response.getWriter();
-                out.print(JSONObject.toJSONString(new Return(Code.Fail,null,"Token失效")));
+                out.print(JSONObject.toJSONString(new Return(Code.TokenExpired,null,"Token失效")));
                 out.flush();
                 out.close();
                 return false;

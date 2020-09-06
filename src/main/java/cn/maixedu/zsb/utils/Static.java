@@ -1,5 +1,7 @@
 package cn.maixedu.zsb.utils;
 
+import cn.maixedu.zsb.model.view.WechatSession;
+
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -8,5 +10,5 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Date:2020/8/29
  */
 public class Static {
-    public static ConcurrentHashMap<String,WechatSession> storeSession = new ConcurrentHashMap<>();
+    public static ConcurrentHashMap<String, WechatSession> storeSession = new ConcurrentHashMap<>();
 }

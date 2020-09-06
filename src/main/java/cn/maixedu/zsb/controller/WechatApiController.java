@@ -1,6 +1,10 @@
 package cn.maixedu.zsb.controller;
 
 import cn.maixedu.zsb.model.User;
+import cn.maixedu.zsb.model.view.WechatLogSuccessResult;
+import cn.maixedu.zsb.model.view.WechatSession;
+import cn.maixedu.zsb.model.view.WechatUserInfo;
+import cn.maixedu.zsb.model.view.WechatUserInfoDetail;
 import cn.maixedu.zsb.service.UserService;
 import cn.maixedu.zsb.utils.*;
 import com.alibaba.fastjson.JSON;
@@ -11,14 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.crypto.Cipher;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.security.AlgorithmParameters;
-import java.security.Key;
-import java.util.Base64;
 
 /**
  * @Description: 微信相关的controller
@@ -45,9 +42,10 @@ public class WechatApiController {
             u.setSex(wechatUserInfoDetail.getGender()==1?"男":"女");
             u.setNickname(wechatUserInfoDetail.getNickName());
             if(userService.addUserByOpenid(u)!=Code.Fail){
+               User uResult = userService.findUserByOpenid(u.getOpenid());
                 WechatLogSuccessResult wechatLogSuccessResult = new WechatLogSuccessResult();
-                wechatLogSuccessResult.setUser(u);
-                String token = JWT.sign(u, 60L* 1000L*30L);
+                wechatLogSuccessResult.setUser(uResult);
+                String token = JWT.sign(uResult, 3600L* 1000L*24L);
                 wechatLogSuccessResult.setToken(token);
                 return new Return(Code.Success,wechatLogSuccessResult,"登录成功");
             }else {

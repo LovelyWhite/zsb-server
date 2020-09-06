@@ -3,6 +3,7 @@ package cn.maixedu.zsb.service;
 import cn.maixedu.zsb.dao.UserMapper;
 import cn.maixedu.zsb.model.User;
 import cn.maixedu.zsb.model.UserExample;
+import cn.maixedu.zsb.model.view.UserDetail;
 import cn.maixedu.zsb.utils.Code;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,17 +37,26 @@ public class UserService {
         }
     }
 
-    public User findUserByOpenid(String openid) {
-        System.out.println(openid);
+    public UserDetail findUserByOpenid(String openid) {
         UserExample userExample = new UserExample();
         UserExample.Criteria criteria =  userExample.createCriteria();
         criteria.andOpenidEqualTo(openid);
-        List<User> userList = userMapper.selectByExample(userExample);
-        System.out.println(userList.size());
+        List<UserDetail> userList = userMapper.selectByExampleWithDetail(userExample);
         if(userList.size()>0){
             return userList.get(0);
         }else {
             return null;
+        }
+    }
+    public int updateUserByOpenid(User user){
+        UserExample userExample = new UserExample();
+        UserExample.Criteria criteria =  userExample.createCriteria();
+        criteria.andOpenidEqualTo(user.getOpenid());
+        if(userMapper.updateByExampleSelective(user,userExample)>0){
+            return Code.Success;
+        }
+        else {
+            return Code.Fail;
         }
     }
 }

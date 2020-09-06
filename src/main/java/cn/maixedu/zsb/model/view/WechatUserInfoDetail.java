@@ -1,6 +1,6 @@
 
 
-package cn.maixedu.zsb.utils;
+package cn.maixedu.zsb.model.view;
 
 /**
  * @Description: 微信 userinfo rawdata

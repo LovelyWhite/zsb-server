@@ -8,6 +8,14 @@
     <result column="code" jdbcType="VARCHAR" property="code" />
     <result column="hascity" jdbcType="CHAR" property="hascity" />
   </resultMap>
+  <resultMap id="BaseResultMapWithName" type="cn.maixedu.zsb.model.view.SubjectDetail">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="firstsubjectid" jdbcType="INTEGER" property="firstsubjectid" />
+    <result column="firstname" jdbcType="VARCHAR" property="firstname" />
+    <result column="secondname" jdbcType="VARCHAR" property="secondname" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="hascity" jdbcType="CHAR" property="hascity" />
+  </resultMap>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -69,6 +77,9 @@
   <sql id="Base_Column_List">
     id, firstsubjectid, name, code, hascity
   </sql>
+  <sql id="Base_Column_List_With_Name">
+    secondsubject.id, firstsubjectid,firstsubject.name as firstname , secondsubject.name as secondname, code, hascity
+  </sql>
   <select id="selectByExample" parameterType="cn.maixedu.zsb.model.SecondSubjectExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -83,6 +94,24 @@
       order by ${orderByClause}
     </if>
   </select>
+
+  <select id="selectByExampleWithName" parameterType="cn.maixedu.zsb.model.SecondSubjectExample" resultMap="BaseResultMapWithName">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List_With_Name" />
+    from secondsubject
+    left join firstsubject
+    ON secondsubject.firstsubjectid=firstsubject.id
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

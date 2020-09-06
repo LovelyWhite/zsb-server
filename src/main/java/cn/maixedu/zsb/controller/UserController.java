@@ -1,14 +1,16 @@
 package cn.maixedu.zsb.controller;
 
 import cn.maixedu.zsb.model.User;
+import cn.maixedu.zsb.model.view.UserDetail;
 import cn.maixedu.zsb.service.UserService;
 import cn.maixedu.zsb.utils.Code;
 import cn.maixedu.zsb.utils.JWT;
 import cn.maixedu.zsb.utils.Return;
-import cn.maixedu.zsb.utils.WechatLogSuccessResult;
+import cn.maixedu.zsb.model.view.WechatLogSuccessResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -48,13 +50,51 @@ public class UserController {
             return new Return(Code.RequestEmpty,openid,"请求参数错误");
         }
         else {
-            User user =  userService.findUserByOpenid(openid);
+            UserDetail user =  userService.findUserByOpenid(openid);
             if(user == null){
                 return new Return(Code.ResponseEmpty,openid,"无此用户");
             }
             else {
-                String token = JWT.sign(user, 60L* 1000L*30L);
+                String token = JWT.sign(user, 3600L* 1000L*24L);
                 return new Return(Code.Success, new WechatLogSuccessResult(user,token),"验证登录成功");
+            }
+        }
+    }
+    @ResponseBody
+    @RequestMapping("/changesexbyopenid")
+    public Return changeSexByOpenid(@RequestParam("sex") String sex, @RequestParam("openid") String openid){
+        if("".equals(sex) || "".equals(openid)){
+            return new Return(Code.RequestEmpty,sex,"请求参数错误");
+        }
+        else{
+            User u = new User();
+            u.setOpenid(openid);
+            u.setSex(sex);
+           int code =  userService.updateUserByOpenid(u);
+           if(code == Code.Success){
+               return new Return(Code.Success,null,"修改成功");
+           }
+           else {
+               return new Return(Code.Success,null,"修改失败");
+           }
+        }
+    }
+    @ResponseBody
+    @RequestMapping("/updatelearning")
+    public Return updateLearning(@RequestParam("learningid") Integer id, @RequestParam("openid") String openid){
+        if("".equals(openid)){
+            return new Return(Code.RequestEmpty,id,"请求参数错误");
+        }
+        else{
+            User u = new User();
+            u.setOpenid(openid);
+            u.setLearning2id(id);
+            int code = userService.updateUserByOpenid(u);
+            if(code == Code.Success){
+                return new Return(Code.Success,null,"修改成功");
+            }
+            else {
+                return new Return(Code.Success,null,"修改失败");
             }
         }
     }
