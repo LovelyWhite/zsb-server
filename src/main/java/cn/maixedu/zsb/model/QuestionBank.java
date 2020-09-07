@@ -27,6 +27,23 @@ public class QuestionBank {
 
     private String intro;
 
+    public QuestionBank() {
+    }
+    public QuestionBank(QuestionBank questionBank) {
+        this.id = questionBank.id;
+        this.questionbanktypeid = questionBank.questionbanktypeid;
+        this.fsubjectid = questionBank.fsubjectid;
+        this.ssubjectid = questionBank.ssubjectid;
+        this.city = questionBank.city;
+        this.priceid = questionBank.priceid;
+        this.name = questionBank.name;
+        this.anticipatetime = questionBank.anticipatetime;
+        this.updatetime = questionBank.updatetime;
+        this.prefectscore = questionBank.prefectscore;
+        this.passscore = questionBank.passscore;
+        this.intro = questionBank.intro;
+    }
+
     public Integer getId() {
         return id;
     }

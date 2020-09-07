@@ -55,8 +55,8 @@ public class UserController {
                 return new Return(Code.ResponseEmpty,openid,"无此用户");
             }
             else {
-                String token = JWT.sign(user, 3600L* 1000L*24L);
-                return new Return(Code.Success, new WechatLogSuccessResult(user,token),"验证登录成功");
+                return new Return(Code.Success, user,"查找用户成功");
+
             }
         }
     }
