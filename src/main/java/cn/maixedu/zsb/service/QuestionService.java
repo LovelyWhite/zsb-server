@@ -1,14 +1,11 @@
 
 package cn.maixedu.zsb.service;
 
+import cn.maixedu.zsb.model.QuestionWithBLOBs;
+import cn.maixedu.zsb.utils.Code;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import cn.maixedu.zsb.dao.QuestionMapper;
-import cn.maixedu.zsb.model.Question;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 /**
  * @Description: 题库的service
@@ -20,9 +17,14 @@ public class QuestionService {
     @Autowired
     QuestionMapper questionMapper;
 
-    public List<Question> addAllQuestion(){
-      //  return questionMapper.insert();
-        return new ArrayList<>();
+    public int addQuestion(QuestionWithBLOBs record) {
+
+        if (questionMapper.insertSelective(record) > 0 ) {
+            return Code.Success;
+        }
+        else {
+            return Code.Fail;
+        }
     }
 }
 
