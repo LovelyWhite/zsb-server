@@ -41,7 +41,8 @@ http://www.springframework.org/schema/context/spring-context.xsd">
             <!-- 匹配的是url路径， 如果不配置或/**,将拦截所有的Controller -->
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/wechat/login" />
-            <mvc:exclude-mapping path="/questionbank/getalltype"/>
+            <mvc:exclude-mapping path="/questionbank/**"/>
+            <mvc:exclude-mapping path="/question/**"/>
             <mvc:exclude-mapping path="/subject/**"/>
             <mvc:exclude-mapping path="/images/**"/>
             <bean class="cn.maixedu.zsb.interceptor.TokenInterceptor"/>

@@ -44,7 +44,7 @@ public class UserController {
         }
     }
     @ResponseBody
-    @RequestMapping("/finduserbyopenid")
+    @RequestMapping("/findbyopenid")
     public Return findUserByOpenid(@RequestParam("openid") String openid){
         if("".equals(openid)){
             return new Return(Code.RequestEmpty,openid,"请求参数错误");

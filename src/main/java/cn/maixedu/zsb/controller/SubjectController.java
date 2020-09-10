@@ -29,7 +29,7 @@ public class SubjectController {
     SubjectService subjectService;
 
     @ResponseBody
-    @RequestMapping("/getallsubject")
+    @RequestMapping("/getall")
     public Return getAllSubject()
     {
         class SbjObj1{

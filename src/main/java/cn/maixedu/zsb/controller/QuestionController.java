@@ -27,6 +27,7 @@ public class QuestionController {
     @ResponseBody
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public Return add(@RequestBody QuestionWithBLOBs record){
+        System.out.println(record);
         int code = questionService.addQuestion(record);
         if(code == Code.Success){
             return new Return(code,record,"添加数据成功");

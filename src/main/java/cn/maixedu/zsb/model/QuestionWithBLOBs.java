@@ -1,5 +1,7 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Arrays;
+
 public class QuestionWithBLOBs extends Question {
     private byte[] title;
 
@@ -69,5 +71,18 @@ public class QuestionWithBLOBs extends Question {
 
     public void setAnalysis(byte[] analysis) {
         this.analysis = analysis;
+    }
+
+    @Override
+    public String toString() {
+        return "QuestionWithBLOBs{" +
+                "title=" + Arrays.toString(title) +
+                ", cqans=" + Arrays.toString(cqans) +
+                ", jqans=" + Arrays.toString(jqans) +
+                ", fbans=" + Arrays.toString(fbans) +
+                ", saand=" + Arrays.toString(saand) +
+                ", options=" + Arrays.toString(options) +
+                ", analysis=" + Arrays.toString(analysis) +
+                '}';
     }
 }

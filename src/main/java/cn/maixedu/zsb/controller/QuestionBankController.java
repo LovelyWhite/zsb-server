@@ -26,6 +26,7 @@ public class QuestionBankController {
     @Autowired
     QuestionBankService questionBankService;
 
+
     @RequestMapping("/getalltype")
     @ResponseBody
     public Return getAllType(){
@@ -37,7 +38,7 @@ public class QuestionBankController {
            return new Return(Code.Success,questionBankTypes,"获取成功");
        }
     }
-    @RequestMapping("/findquestionbankbyany")
+    @RequestMapping("/findbyany")
     @ResponseBody
     public Return findQuestionBankByAny(@RequestParam("typeid") Integer typeId, @RequestParam(defaultValue = "",value = "city",required = false) String city,@RequestParam("secondsubjectid") Integer ssid)
     {
@@ -48,5 +49,10 @@ public class QuestionBankController {
         else {
             return new Return(Code.Success,questionBanks,"获取成功");
         }
+    }
+    @RequestMapping("/getdetailbyid")
+    @ResponseBody
+    public Return getDetailById(@RequestParam("id") int id){
+        return null;
     }
 }
