@@ -3,6 +3,8 @@ package cn.maixedu.zsb.dao;
 import cn.maixedu.zsb.model.BankWithQuestion;
 import cn.maixedu.zsb.model.BankWithQuestionExample;
 import java.util.List;
+
+import cn.maixedu.zsb.model.view.BankWithQuestionDetail;
 import org.apache.ibatis.annotations.Param;
 
 public interface BankWithQuestionMapper {
@@ -17,6 +19,8 @@ public interface BankWithQuestionMapper {
     int insertSelective(BankWithQuestion record);
 
     List<BankWithQuestion> selectByExample(BankWithQuestionExample example);
+
+    List<BankWithQuestionDetail> selectByExampleWithDetail(BankWithQuestionExample example);
 
     BankWithQuestion selectByPrimaryKey(Integer id);
 

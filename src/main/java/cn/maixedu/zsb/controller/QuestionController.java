@@ -26,7 +26,7 @@ public class QuestionController {
     @ResponseBody
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public Return add(@RequestBody QuestionWithBLOBs record){
-        if(record.getTitle() == null || "".equals(record.getTitle())) {
+        if(record.getTitle() == null) {
             return new Return(Code.RequestEmpty, record, "请求参数错误");
         }
         else {

@@ -2,7 +2,10 @@ package cn.maixedu.zsb.controller;
 
 import cn.maixedu.zsb.model.QuestionBank;
 import cn.maixedu.zsb.model.QuestionBankType;
+import cn.maixedu.zsb.model.QuestionWithBLOBs;
+import cn.maixedu.zsb.model.view.BankWithQuestionDetail;
 import cn.maixedu.zsb.service.AnswerRecordService;
+import cn.maixedu.zsb.service.BankWithQuestionService;
 import cn.maixedu.zsb.service.QuestionBankService;
 import cn.maixedu.zsb.utils.Return;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import cn.maixedu.zsb.utils.Code;
 
 import java.sql.Struct;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,6 +30,11 @@ public class QuestionBankController {
     @Autowired
     QuestionBankService questionBankService;
 
+    @Autowired
+    BankWithQuestionService bankWithQuestionService;
+
+    @Autowired
+    AnswerRecordService answerRecordService;
 
     @RequestMapping("/getalltype")
     @ResponseBody
@@ -53,6 +62,47 @@ public class QuestionBankController {
     @RequestMapping("/getdetailbyid")
     @ResponseBody
     public Return getDetailById(@RequestParam("id") int id){
-        return null;
+        List<BankWithQuestionDetail> _list =  bankWithQuestionService.getAllQuestionsByBankId(id);
+       if(_list.size()==0){
+           return new Return(Code.ResponseEmpty,null,"内容为空");
+       }
+       else {
+           class Obj1{
+               long done;
+
+               public Obj1() {
+               }
+
+               List<QuestionWithBLOBs> list;
+
+               public Obj1(long done, List<QuestionWithBLOBs> list) {
+                   this.done = done;
+                   this.list = list;
+               }
+
+               public long getDone() {
+                   return done;
+               }
+
+               public void setDone(long done) {
+                   this.done = done;
+               }
+
+               public List<QuestionWithBLOBs> getList() {
+                   return list;
+               }
+
+               public void setList(List<QuestionWithBLOBs> list) {
+                   this.list = list;
+               }
+           }
+           long done =  answerRecordService.recordNum(id);
+           List<QuestionWithBLOBs> list = new ArrayList<>();
+          _list.forEach(e->{
+               list.add(e.getQuestion());
+           });
+           Obj1 obj1 = new Obj1(done,list);
+           return new Return(Code.Success,obj1,"获取成功");
+       }
     }
 }
