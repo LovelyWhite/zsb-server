@@ -2,11 +2,14 @@
 package cn.maixedu.zsb.service;
 
 
+import cn.maixedu.zsb.model.QuestionExample;
 import cn.maixedu.zsb.model.QuestionWithBLOBs;
 import cn.maixedu.zsb.utils.Code;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import cn.maixedu.zsb.dao.QuestionMapper;
+
+import java.util.List;
 
 /**
  * @Description: 题库的service
@@ -44,8 +47,5 @@ public class QuestionService {
             return Code.Fail;
         }
     }
-
-
-
 }
 

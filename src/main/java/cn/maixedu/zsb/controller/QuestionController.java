@@ -54,7 +54,7 @@ public class QuestionController {
         @ResponseBody
         @RequestMapping("/updatebyid")
         public Return updateQuestionById(QuestionWithBLOBs record){
-          if("".equals(record.getId())){
+          if(record.getId() == null){
              return new Return(Code.RequestEmpty,record,"请求参数错误");
           }
           else{
