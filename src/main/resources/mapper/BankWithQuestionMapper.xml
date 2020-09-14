@@ -6,6 +6,29 @@
     <result column="questionbankid" jdbcType="INTEGER" property="questionbankid" />
     <result column="questionid" jdbcType="INTEGER" property="questionid" />
   </resultMap>
+  <resultMap id="BaseResultMapWithDetail" type="cn.maixedu.zsb.model.view.BankWithQuestionDetail">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="questionbankid" jdbcType="INTEGER" property="questionbankid" />
+    <result column="questionid" jdbcType="INTEGER" property="questionid" />
+    <association property="question" javaType="cn.maixedu.zsb.model.QuestionWithBLOBs">
+      <id column="q_id" jdbcType="INTEGER" property="id" />
+      <result column="type" jdbcType="CHAR" property="type" />
+      <result column="typename" jdbcType="VARCHAR" property="typename" />
+      <result column="difficulty" jdbcType="INTEGER" property="difficulty" />
+      <result column="righttime" jdbcType="INTEGER" property="righttime" />
+      <result column="wrongtime" jdbcType="INTEGER" property="wrongtime" />
+      <result column="video" jdbcType="VARCHAR" property="video" />
+      <result column="testcentre" jdbcType="VARCHAR" property="testcentre" />
+      <result column="keyword" jdbcType="VARCHAR" property="keyword" />
+      <result column="title" jdbcType="LONGVARBINARY" property="title" />
+      <result column="cqans" jdbcType="LONGVARBINARY" property="cqans" />
+      <result column="jqans" jdbcType="LONGVARBINARY" property="jqans" />
+      <result column="fbans" jdbcType="LONGVARBINARY" property="fbans" />
+      <result column="saand" jdbcType="LONGVARBINARY" property="saand" />
+      <result column="options" jdbcType="LONGVARBINARY" property="options" />
+      <result column="analysis" jdbcType="LONGVARBINARY" property="analysis" />
+    </association>
+  </resultMap>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -67,6 +90,9 @@
   <sql id="Base_Column_List">
     id, questionbankid, questionid
   </sql>
+  <sql id="Base_Column_List_With_Detail">
+    bankwithquestion.id as id, questionbankid, questionid,question.id as q_id,type, typename, difficulty, righttime, wrongtime, video, testcentre, keyword,title, cqans, jqans, fbans, saand, options, analysis
+  </sql>
   <select id="selectByExample" parameterType="cn.maixedu.zsb.model.BankWithQuestionExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -81,6 +107,24 @@
       order by ${orderByClause}
     </if>
   </select>
+
+  <select id="selectByExampleWithDetail" parameterType="cn.maixedu.zsb.model.BankWithQuestionExample" resultMap="BaseResultMapWithDetail">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List_With_Detail" />
+    from bankwithquestion
+    left join question
+    on bankwithquestion.questionid=question.id
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
