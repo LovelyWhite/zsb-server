@@ -25,7 +25,7 @@ public class QuestionController {
 
     @ResponseBody
     @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public Return add(@RequestBody QuestionWithBLOBs record){
+    public Return addQuestion(@RequestBody QuestionWithBLOBs record){
         if(record.getTitle() == null || "".equals(record.getTitle())) {
             return new Return(Code.RequestEmpty, record, "请求参数错误");
         }
@@ -41,7 +41,7 @@ public class QuestionController {
 
     @ResponseBody
     @RequestMapping("/deletebyid")
-    public Return deleteById(@RequestParam("id") Integer id){
+    public Return deleteQuestionById(@RequestParam("id") Integer id){
             int code = questionService.deleteQuestionById(id);
             if(code == Code.Fail){
                 return new Return(code,id,"删除数据失败");
@@ -49,6 +49,23 @@ public class QuestionController {
             else{
                 return new Return(code,id,"删除数据成功");
             }
+        }
+
+        @ResponseBody
+        @RequestMapping("/updatebyid")
+        public Return updateQuestionById(QuestionWithBLOBs record){
+          if("".equals(record.getId())){
+             return new Return(Code.RequestEmpty,record,"请求参数错误");
+          }
+          else{
+             int code = questionService.updateQuestionById(record);
+             if(code == Code.Fail){
+                 return new Return(code,null,"修改成功");
+             }
+             else{
+                 return new Return(code,null,"修改失败");
+             }
+          }
         }
     }
 

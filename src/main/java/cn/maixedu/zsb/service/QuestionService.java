@@ -1,8 +1,7 @@
 
 package cn.maixedu.zsb.service;
 
-import cn.maixedu.zsb.model.Question;
-import cn.maixedu.zsb.model.QuestionExample;
+
 import cn.maixedu.zsb.model.QuestionWithBLOBs;
 import cn.maixedu.zsb.utils.Code;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +35,17 @@ public class QuestionService {
             return Code.Fail;
         }
     }
+
+    public int updateQuestionById(QuestionWithBLOBs record){
+        if(questionMapper.updateByPrimaryKeySelective(record)>0){
+            return Code.Success;
+        }
+        else{
+            return Code.Fail;
+        }
+    }
+
+
+
 }
 
