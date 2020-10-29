@@ -345,183 +345,183 @@ public class AnswerRecordExample {
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeIsNull() {
-            addCriterion("ansertime is null");
+        public Criteria andAnswertimeIsNull() {
+            addCriterion("answertime is null");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeIsNotNull() {
-            addCriterion("ansertime is not null");
+        public Criteria andAnswertimeIsNotNull() {
+            addCriterion("answertime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeEqualTo(Date value) {
-            addCriterion("ansertime =", value, "ansertime");
+        public Criteria andAnswertimeEqualTo(Date value) {
+            addCriterion("answertime =", value, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeNotEqualTo(Date value) {
-            addCriterion("ansertime <>", value, "ansertime");
+        public Criteria andAnswertimeNotEqualTo(Date value) {
+            addCriterion("answertime <>", value, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeGreaterThan(Date value) {
-            addCriterion("ansertime >", value, "ansertime");
+        public Criteria andAnswertimeGreaterThan(Date value) {
+            addCriterion("answertime >", value, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("ansertime >=", value, "ansertime");
+        public Criteria andAnswertimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("answertime >=", value, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeLessThan(Date value) {
-            addCriterion("ansertime <", value, "ansertime");
+        public Criteria andAnswertimeLessThan(Date value) {
+            addCriterion("answertime <", value, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeLessThanOrEqualTo(Date value) {
-            addCriterion("ansertime <=", value, "ansertime");
+        public Criteria andAnswertimeLessThanOrEqualTo(Date value) {
+            addCriterion("answertime <=", value, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeIn(List<Date> values) {
-            addCriterion("ansertime in", values, "ansertime");
+        public Criteria andAnswertimeIn(List<Date> values) {
+            addCriterion("answertime in", values, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeNotIn(List<Date> values) {
-            addCriterion("ansertime not in", values, "ansertime");
+        public Criteria andAnswertimeNotIn(List<Date> values) {
+            addCriterion("answertime not in", values, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeBetween(Date value1, Date value2) {
-            addCriterion("ansertime between", value1, value2, "ansertime");
+        public Criteria andAnswertimeBetween(Date value1, Date value2) {
+            addCriterion("answertime between", value1, value2, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andAnsertimeNotBetween(Date value1, Date value2) {
-            addCriterion("ansertime not between", value1, value2, "ansertime");
+        public Criteria andAnswertimeNotBetween(Date value1, Date value2) {
+            addCriterion("answertime not between", value1, value2, "answertime");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreIsNull() {
-            addCriterion("gotsocre is null");
+        public Criteria andGotscoreIsNull() {
+            addCriterion("gotscore is null");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreIsNotNull() {
-            addCriterion("gotsocre is not null");
+        public Criteria andGotscoreIsNotNull() {
+            addCriterion("gotscore is not null");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreEqualTo(Integer value) {
-            addCriterion("gotsocre =", value, "gotsocre");
+        public Criteria andGotscoreEqualTo(Integer value) {
+            addCriterion("gotscore =", value, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreNotEqualTo(Integer value) {
-            addCriterion("gotsocre <>", value, "gotsocre");
+        public Criteria andGotscoreNotEqualTo(Integer value) {
+            addCriterion("gotscore <>", value, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreGreaterThan(Integer value) {
-            addCriterion("gotsocre >", value, "gotsocre");
+        public Criteria andGotscoreGreaterThan(Integer value) {
+            addCriterion("gotscore >", value, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreGreaterThanOrEqualTo(Integer value) {
-            addCriterion("gotsocre >=", value, "gotsocre");
+        public Criteria andGotscoreGreaterThanOrEqualTo(Integer value) {
+            addCriterion("gotscore >=", value, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreLessThan(Integer value) {
-            addCriterion("gotsocre <", value, "gotsocre");
+        public Criteria andGotscoreLessThan(Integer value) {
+            addCriterion("gotscore <", value, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreLessThanOrEqualTo(Integer value) {
-            addCriterion("gotsocre <=", value, "gotsocre");
+        public Criteria andGotscoreLessThanOrEqualTo(Integer value) {
+            addCriterion("gotscore <=", value, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreIn(List<Integer> values) {
-            addCriterion("gotsocre in", values, "gotsocre");
+        public Criteria andGotscoreIn(List<Integer> values) {
+            addCriterion("gotscore in", values, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreNotIn(List<Integer> values) {
-            addCriterion("gotsocre not in", values, "gotsocre");
+        public Criteria andGotscoreNotIn(List<Integer> values) {
+            addCriterion("gotscore not in", values, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreBetween(Integer value1, Integer value2) {
-            addCriterion("gotsocre between", value1, value2, "gotsocre");
+        public Criteria andGotscoreBetween(Integer value1, Integer value2) {
+            addCriterion("gotscore between", value1, value2, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andGotsocreNotBetween(Integer value1, Integer value2) {
-            addCriterion("gotsocre not between", value1, value2, "gotsocre");
+        public Criteria andGotscoreNotBetween(Integer value1, Integer value2) {
+            addCriterion("gotscore not between", value1, value2, "gotscore");
             return (Criteria) this;
         }
 
-        public Criteria andSocreIsNull() {
-            addCriterion("socre is null");
+        public Criteria andScoreIsNull() {
+            addCriterion("score is null");
             return (Criteria) this;
         }
 
-        public Criteria andSocreIsNotNull() {
-            addCriterion("socre is not null");
+        public Criteria andScoreIsNotNull() {
+            addCriterion("score is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSocreEqualTo(Integer value) {
-            addCriterion("socre =", value, "socre");
+        public Criteria andScoreEqualTo(Integer value) {
+            addCriterion("score =", value, "score");
             return (Criteria) this;
         }
 
-        public Criteria andSocreNotEqualTo(Integer value) {
-            addCriterion("socre <>", value, "socre");
+        public Criteria andScoreNotEqualTo(Integer value) {
+            addCriterion("score <>", value, "score");
             return (Criteria) this;
         }
 
-        public Criteria andSocreGreaterThan(Integer value) {
-            addCriterion("socre >", value, "socre");
+        public Criteria andScoreGreaterThan(Integer value) {
+            addCriterion("score >", value, "score");
             return (Criteria) this;
         }
 
-        public Criteria andSocreGreaterThanOrEqualTo(Integer value) {
-            addCriterion("socre >=", value, "socre");
+        public Criteria andScoreGreaterThanOrEqualTo(Integer value) {
+            addCriterion("score >=", value, "score");
             return (Criteria) this;
         }
 
-        public Criteria andSocreLessThan(Integer value) {
-            addCriterion("socre <", value, "socre");
+        public Criteria andScoreLessThan(Integer value) {
+            addCriterion("score <", value, "score");
             return (Criteria) this;
         }
 
-        public Criteria andSocreLessThanOrEqualTo(Integer value) {
-            addCriterion("socre <=", value, "socre");
+        public Criteria andScoreLessThanOrEqualTo(Integer value) {
+            addCriterion("score <=", value, "score");
             return (Criteria) this;
         }
 
-        public Criteria andSocreIn(List<Integer> values) {
-            addCriterion("socre in", values, "socre");
+        public Criteria andScoreIn(List<Integer> values) {
+            addCriterion("score in", values, "score");
             return (Criteria) this;
         }
 
-        public Criteria andSocreNotIn(List<Integer> values) {
-            addCriterion("socre not in", values, "socre");
+        public Criteria andScoreNotIn(List<Integer> values) {
+            addCriterion("score not in", values, "score");
             return (Criteria) this;
         }
 
-        public Criteria andSocreBetween(Integer value1, Integer value2) {
-            addCriterion("socre between", value1, value2, "socre");
+        public Criteria andScoreBetween(Integer value1, Integer value2) {
+            addCriterion("score between", value1, value2, "score");
             return (Criteria) this;
         }
 
-        public Criteria andSocreNotBetween(Integer value1, Integer value2) {
-            addCriterion("socre not between", value1, value2, "socre");
+        public Criteria andScoreNotBetween(Integer value1, Integer value2) {
+            addCriterion("score not between", value1, value2, "score");
             return (Criteria) this;
         }
     }

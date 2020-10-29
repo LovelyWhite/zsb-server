@@ -9,7 +9,9 @@ public class Course {
 
     private String name;
 
-    private byte[] intro;
+    private String intro;
+
+    private String poster;
 
     public Integer getId() {
         return id;
@@ -43,11 +45,19 @@ public class Course {
         this.name = name;
     }
 
-    public byte[] getIntro() {
+    public String getIntro() {
         return intro;
     }
 
-    public void setIntro(byte[] intro) {
+    public void setIntro(String intro) {
         this.intro = intro;
+    }
+
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
     }
 }

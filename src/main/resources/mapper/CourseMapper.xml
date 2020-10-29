@@ -6,9 +6,8 @@
     <result column="teacherid" jdbcType="INTEGER" property="teacherid" />
     <result column="priceid" jdbcType="INTEGER" property="priceid" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-  </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="cn.maixedu.zsb.model.Course">
-    <result column="intro" jdbcType="LONGVARBINARY" property="intro" />
+    <result column="intro" jdbcType="VARCHAR" property="intro" />
+    <result column="poster" jdbcType="VARCHAR" property="poster" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -69,27 +68,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, teacherid, priceid, name
+    id, teacherid, priceid, name, intro, poster
   </sql>
-  <sql id="Blob_Column_List">
-    intro
-  </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="cn.maixedu.zsb.model.CourseExample" resultMap="ResultMapWithBLOBs">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
-    from course
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null">
-      order by ${orderByClause}
-    </if>
-  </select>
   <select id="selectByExample" parameterType="cn.maixedu.zsb.model.CourseExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -104,11 +84,9 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
     from course
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -124,9 +102,11 @@
   </delete>
   <insert id="insert" parameterType="cn.maixedu.zsb.model.Course">
     insert into course (id, teacherid, priceid, 
-      name, intro)
+      name, intro, poster
+      )
     values (#{id,jdbcType=INTEGER}, #{teacherid,jdbcType=INTEGER}, #{priceid,jdbcType=INTEGER}, 
-      #{name,jdbcType=VARCHAR}, #{intro,jdbcType=LONGVARBINARY})
+      #{name,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR}, #{poster,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="cn.maixedu.zsb.model.Course">
     insert into course
@@ -146,6 +126,9 @@
       <if test="intro != null">
         intro,
       </if>
+      <if test="poster != null">
+        poster,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -161,7 +144,10 @@
         #{name,jdbcType=VARCHAR},
       </if>
       <if test="intro != null">
-        #{intro,jdbcType=LONGVARBINARY},
+        #{intro,jdbcType=VARCHAR},
+      </if>
+      <if test="poster != null">
+        #{poster,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -187,20 +173,12 @@
         name = #{record.name,jdbcType=VARCHAR},
       </if>
       <if test="record.intro != null">
-        intro = #{record.intro,jdbcType=LONGVARBINARY},
+        intro = #{record.intro,jdbcType=VARCHAR},
+      </if>
+      <if test="record.poster != null">
+        poster = #{record.poster,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExampleWithBLOBs" parameterType="map">
-    update course
-    set id = #{record.id,jdbcType=INTEGER},
-      teacherid = #{record.teacherid,jdbcType=INTEGER},
-      priceid = #{record.priceid,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR},
-      intro = #{record.intro,jdbcType=LONGVARBINARY}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -210,7 +188,9 @@
     set id = #{record.id,jdbcType=INTEGER},
       teacherid = #{record.teacherid,jdbcType=INTEGER},
       priceid = #{record.priceid,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR}
+      name = #{record.name,jdbcType=VARCHAR},
+      intro = #{record.intro,jdbcType=VARCHAR},
+      poster = #{record.poster,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -228,24 +208,21 @@
         name = #{name,jdbcType=VARCHAR},
       </if>
       <if test="intro != null">
-        intro = #{intro,jdbcType=LONGVARBINARY},
+        intro = #{intro,jdbcType=VARCHAR},
+      </if>
+      <if test="poster != null">
+        poster = #{poster,jdbcType=VARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="cn.maixedu.zsb.model.Course">
-    update course
-    set teacherid = #{teacherid,jdbcType=INTEGER},
-      priceid = #{priceid,jdbcType=INTEGER},
-      name = #{name,jdbcType=VARCHAR},
-      intro = #{intro,jdbcType=LONGVARBINARY}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.maixedu.zsb.model.Course">
     update course
     set teacherid = #{teacherid,jdbcType=INTEGER},
       priceid = #{priceid,jdbcType=INTEGER},
-      name = #{name,jdbcType=VARCHAR}
+      name = #{name,jdbcType=VARCHAR},
+      intro = #{intro,jdbcType=VARCHAR},
+      poster = #{poster,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

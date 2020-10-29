@@ -11,11 +11,11 @@ public class AnswerRecord {
 
     private Integer costtime;
 
-    private Date ansertime;
+    private Date answertime;
 
-    private Integer gotsocre;
+    private Integer gotscore;
 
-    private Integer socre;
+    private Integer score;
 
     public Integer getId() {
         return id;
@@ -49,27 +49,27 @@ public class AnswerRecord {
         this.costtime = costtime;
     }
 
-    public Date getAnsertime() {
-        return ansertime;
+    public Date getAnswertime() {
+        return answertime;
     }
 
-    public void setAnsertime(Date ansertime) {
-        this.ansertime = ansertime;
+    public void setAnswertime(Date answertime) {
+        this.answertime = answertime;
     }
 
-    public Integer getGotsocre() {
-        return gotsocre;
+    public Integer getGotscore() {
+        return gotscore;
     }
 
-    public void setGotsocre(Integer gotsocre) {
-        this.gotsocre = gotsocre;
+    public void setGotscore(Integer gotscore) {
+        this.gotscore = gotscore;
     }
 
-    public Integer getSocre() {
-        return socre;
+    public Integer getScore() {
+        return score;
     }
 
-    public void setSocre(Integer socre) {
-        this.socre = socre;
+    public void setScore(Integer score) {
+        this.score = score;
     }
 }

@@ -6,9 +6,9 @@
     <result column="userid" jdbcType="INTEGER" property="userid" />
     <result column="questionbankid" jdbcType="INTEGER" property="questionbankid" />
     <result column="costtime" jdbcType="INTEGER" property="costtime" />
-    <result column="ansertime" jdbcType="TIMESTAMP" property="ansertime" />
-    <result column="gotsocre" jdbcType="INTEGER" property="gotsocre" />
-    <result column="socre" jdbcType="INTEGER" property="socre" />
+    <result column="answertime" jdbcType="TIMESTAMP" property="answertime" />
+    <result column="gotscore" jdbcType="INTEGER" property="gotscore" />
+    <result column="score" jdbcType="INTEGER" property="score" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -69,7 +69,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, userid, questionbankid, costtime, ansertime, gotsocre, socre
+    id, userid, questionbankid, costtime, answertime, gotscore, score
   </sql>
   <select id="selectByExample" parameterType="cn.maixedu.zsb.model.AnswerRecordExample" resultMap="BaseResultMap">
     select
@@ -103,11 +103,11 @@
   </delete>
   <insert id="insert" parameterType="cn.maixedu.zsb.model.AnswerRecord">
     insert into answerrecord (id, userid, questionbankid, 
-      costtime, ansertime, gotsocre, 
-      socre)
+      costtime, answertime, gotscore, 
+      score)
     values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{questionbankid,jdbcType=INTEGER}, 
-      #{costtime,jdbcType=INTEGER}, #{ansertime,jdbcType=TIMESTAMP}, #{gotsocre,jdbcType=INTEGER}, 
-      #{socre,jdbcType=INTEGER})
+      #{costtime,jdbcType=INTEGER}, #{answertime,jdbcType=TIMESTAMP}, #{gotscore,jdbcType=INTEGER}, 
+      #{score,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="cn.maixedu.zsb.model.AnswerRecord">
     insert into answerrecord
@@ -124,14 +124,14 @@
       <if test="costtime != null">
         costtime,
       </if>
-      <if test="ansertime != null">
-        ansertime,
+      <if test="answertime != null">
+        answertime,
       </if>
-      <if test="gotsocre != null">
-        gotsocre,
+      <if test="gotscore != null">
+        gotscore,
       </if>
-      <if test="socre != null">
-        socre,
+      <if test="score != null">
+        score,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -147,14 +147,14 @@
       <if test="costtime != null">
         #{costtime,jdbcType=INTEGER},
       </if>
-      <if test="ansertime != null">
-        #{ansertime,jdbcType=TIMESTAMP},
+      <if test="answertime != null">
+        #{answertime,jdbcType=TIMESTAMP},
       </if>
-      <if test="gotsocre != null">
-        #{gotsocre,jdbcType=INTEGER},
+      <if test="gotscore != null">
+        #{gotscore,jdbcType=INTEGER},
       </if>
-      <if test="socre != null">
-        #{socre,jdbcType=INTEGER},
+      <if test="score != null">
+        #{score,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -179,14 +179,14 @@
       <if test="record.costtime != null">
         costtime = #{record.costtime,jdbcType=INTEGER},
       </if>
-      <if test="record.ansertime != null">
-        ansertime = #{record.ansertime,jdbcType=TIMESTAMP},
+      <if test="record.answertime != null">
+        answertime = #{record.answertime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.gotsocre != null">
-        gotsocre = #{record.gotsocre,jdbcType=INTEGER},
+      <if test="record.gotscore != null">
+        gotscore = #{record.gotscore,jdbcType=INTEGER},
       </if>
-      <if test="record.socre != null">
-        socre = #{record.socre,jdbcType=INTEGER},
+      <if test="record.score != null">
+        score = #{record.score,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null">
@@ -199,9 +199,9 @@
       userid = #{record.userid,jdbcType=INTEGER},
       questionbankid = #{record.questionbankid,jdbcType=INTEGER},
       costtime = #{record.costtime,jdbcType=INTEGER},
-      ansertime = #{record.ansertime,jdbcType=TIMESTAMP},
-      gotsocre = #{record.gotsocre,jdbcType=INTEGER},
-      socre = #{record.socre,jdbcType=INTEGER}
+      answertime = #{record.answertime,jdbcType=TIMESTAMP},
+      gotscore = #{record.gotscore,jdbcType=INTEGER},
+      score = #{record.score,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -218,14 +218,14 @@
       <if test="costtime != null">
         costtime = #{costtime,jdbcType=INTEGER},
       </if>
-      <if test="ansertime != null">
-        ansertime = #{ansertime,jdbcType=TIMESTAMP},
+      <if test="answertime != null">
+        answertime = #{answertime,jdbcType=TIMESTAMP},
       </if>
-      <if test="gotsocre != null">
-        gotsocre = #{gotsocre,jdbcType=INTEGER},
+      <if test="gotscore != null">
+        gotscore = #{gotscore,jdbcType=INTEGER},
       </if>
-      <if test="socre != null">
-        socre = #{socre,jdbcType=INTEGER},
+      <if test="score != null">
+        score = #{score,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -235,9 +235,9 @@
     set userid = #{userid,jdbcType=INTEGER},
       questionbankid = #{questionbankid,jdbcType=INTEGER},
       costtime = #{costtime,jdbcType=INTEGER},
-      ansertime = #{ansertime,jdbcType=TIMESTAMP},
-      gotsocre = #{gotsocre,jdbcType=INTEGER},
-      socre = #{socre,jdbcType=INTEGER}
+      answertime = #{answertime,jdbcType=TIMESTAMP},
+      gotscore = #{gotscore,jdbcType=INTEGER},
+      score = #{score,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
