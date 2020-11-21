@@ -9,9 +9,11 @@ public class Course {
 
     private String name;
 
-    private String intro;
-
     private String poster;
+
+    private Integer viewsnum;
+
+    private byte[] intro;
 
     public Integer getId() {
         return id;
@@ -45,19 +47,27 @@ public class Course {
         this.name = name;
     }
 
-    public String getIntro() {
-        return intro;
-    }
-
-    public void setIntro(String intro) {
-        this.intro = intro;
-    }
-
     public String getPoster() {
         return poster;
     }
 
     public void setPoster(String poster) {
         this.poster = poster;
+    }
+
+    public Integer getViewsnum() {
+        return viewsnum;
+    }
+
+    public void setViewsnum(Integer viewsnum) {
+        this.viewsnum = viewsnum;
+    }
+
+    public byte[] getIntro() {
+        return intro;
+    }
+
+    public void setIntro(byte[] intro) {
+        this.intro = intro;
     }
 }
