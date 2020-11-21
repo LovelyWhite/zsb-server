@@ -49,6 +49,8 @@ public class User {
 
     private String openid;
 
+    private Double money;
+
     public Integer getId() {
         return id;
     }
@@ -233,32 +235,11 @@ public class User {
         this.openid = openid;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", account='" + account + '\'' +
-                ", password='" + password + '\'' +
-                ", sex='" + sex + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", age=" + age +
-                ", nickname='" + nickname + '\'' +
-                ", usertypeid=" + usertypeid +
-                ", regtime=" + regtime +
-                ", updatetime=" + updatetime +
-                ", recommendid=" + recommendid +
-                ", realname='" + realname + '\'' +
-                ", idcardnum='" + idcardnum + '\'' +
-                ", birthday=" + birthday +
-                ", ban='" + ban + '\'' +
-                ", qus='" + qus + '\'' +
-                ", qusans='" + qusans + '\'' +
-                ", tel='" + tel + '\'' +
-                ", email='" + email + '\'' +
-                ", qq='" + qq + '\'' +
-                ", wechat='" + wechat + '\'' +
-                ", learning2id=" + learning2id +
-                ", openid='" + openid + '\'' +
-                '}';
+    public Double getMoney() {
+        return money;
+    }
+
+    public void setMoney(Double money) {
+        this.money = money;
     }
 }

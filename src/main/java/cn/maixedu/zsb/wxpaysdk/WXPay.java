@@ -1,6 +1,6 @@
-package com.github.wxpay.sdk;
+package cn.maixedu.zsb.wxpaysdk;
 
-import com.github.wxpay.sdk.WXPayConstants.SignType;
+import cn.maixedu.zsb.wxpaysdk.WXPayConstants.SignType;
 
 import java.util.HashMap;
 import java.util.Map;

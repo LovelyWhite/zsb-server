@@ -1,5 +1,7 @@
 package cn.maixedu.zsb.model;
 
+import java.util.Date;
+
 public class Course {
     private Integer id;
 
@@ -12,6 +14,10 @@ public class Course {
     private String poster;
 
     private Integer viewsnum;
+
+    private Date updatetime;
+
+    private Integer secondsubjectid;
 
     private byte[] intro;
 
@@ -61,6 +67,22 @@ public class Course {
 
     public void setViewsnum(Integer viewsnum) {
         this.viewsnum = viewsnum;
+    }
+
+    public Date getUpdatetime() {
+        return updatetime;
+    }
+
+    public void setUpdatetime(Date updatetime) {
+        this.updatetime = updatetime;
+    }
+
+    public Integer getSecondsubjectid() {
+        return secondsubjectid;
+    }
+
+    public void setSecondsubjectid(Integer secondsubjectid) {
+        this.secondsubjectid = secondsubjectid;
     }
 
     public byte[] getIntro() {

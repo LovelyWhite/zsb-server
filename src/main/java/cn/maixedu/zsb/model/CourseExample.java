@@ -1,6 +1,7 @@
 package cn.maixedu.zsb.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class CourseExample {
@@ -481,6 +482,126 @@ public class CourseExample {
 
         public Criteria andViewsnumNotBetween(Integer value1, Integer value2) {
             addCriterion("viewsnum not between", value1, value2, "viewsnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeIsNull() {
+            addCriterion("updatetime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeIsNotNull() {
+            addCriterion("updatetime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeEqualTo(Date value) {
+            addCriterion("updatetime =", value, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeNotEqualTo(Date value) {
+            addCriterion("updatetime <>", value, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeGreaterThan(Date value) {
+            addCriterion("updatetime >", value, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("updatetime >=", value, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeLessThan(Date value) {
+            addCriterion("updatetime <", value, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeLessThanOrEqualTo(Date value) {
+            addCriterion("updatetime <=", value, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeIn(List<Date> values) {
+            addCriterion("updatetime in", values, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeNotIn(List<Date> values) {
+            addCriterion("updatetime not in", values, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeBetween(Date value1, Date value2) {
+            addCriterion("updatetime between", value1, value2, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatetimeNotBetween(Date value1, Date value2) {
+            addCriterion("updatetime not between", value1, value2, "updatetime");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidIsNull() {
+            addCriterion("secondsubjectid is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidIsNotNull() {
+            addCriterion("secondsubjectid is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidEqualTo(Integer value) {
+            addCriterion("secondsubjectid =", value, "secondsubjectid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidNotEqualTo(Integer value) {
+            addCriterion("secondsubjectid <>", value, "secondsubjectid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidGreaterThan(Integer value) {
+            addCriterion("secondsubjectid >", value, "secondsubjectid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidGreaterThanOrEqualTo(Integer value) {
+            addCriterion("secondsubjectid >=", value, "secondsubjectid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidLessThan(Integer value) {
+            addCriterion("secondsubjectid <", value, "secondsubjectid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidLessThanOrEqualTo(Integer value) {
+            addCriterion("secondsubjectid <=", value, "secondsubjectid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidIn(List<Integer> values) {
+            addCriterion("secondsubjectid in", values, "secondsubjectid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidNotIn(List<Integer> values) {
+            addCriterion("secondsubjectid not in", values, "secondsubjectid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidBetween(Integer value1, Integer value2) {
+            addCriterion("secondsubjectid between", value1, value2, "secondsubjectid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSecondsubjectidNotBetween(Integer value1, Integer value2) {
+            addCriterion("secondsubjectid not between", value1, value2, "secondsubjectid");
             return (Criteria) this;
         }
     }

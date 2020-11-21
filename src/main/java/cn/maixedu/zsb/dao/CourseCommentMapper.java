@@ -3,6 +3,8 @@ package cn.maixedu.zsb.dao;
 import cn.maixedu.zsb.model.CourseComment;
 import cn.maixedu.zsb.model.CourseCommentExample;
 import java.util.List;
+
+import cn.maixedu.zsb.model.view.CourseCommentWithDetail;
 import org.apache.ibatis.annotations.Param;
 
 public interface CourseCommentMapper {
@@ -17,6 +19,8 @@ public interface CourseCommentMapper {
     int insertSelective(CourseComment record);
 
     List<CourseComment> selectByExample(CourseCommentExample example);
+
+    List<CourseCommentWithDetail> selectByExampleWithDetail (CourseCommentExample example);
 
     CourseComment selectByPrimaryKey(Integer id);
 

@@ -1,4 +1,4 @@
-package com.github.wxpay.sdk;
+package cn.maixedu.zsb.wxpaysdk;
 
 import org.w3c.dom.Document;
 

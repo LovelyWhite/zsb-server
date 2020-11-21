@@ -1,4 +1,4 @@
-package com.github.wxpay.sdk;
+package cn.maixedu.zsb.wxpaysdk;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -24,7 +24,8 @@ import java.net.UnknownHostException;
 import java.security.KeyStore;
 import java.security.SecureRandom;
 
-import static com.github.wxpay.sdk.WXPayConstants.USER_AGENT;
+import static cn.maixedu.zsb.wxpaysdk.WXPayConstants.USER_AGENT;
+
 
 public class WXPayRequest {
     private WXPayConfig config;

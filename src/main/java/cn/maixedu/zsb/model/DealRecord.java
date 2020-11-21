@@ -7,15 +7,17 @@ public class DealRecord {
 
     private Integer userid;
 
-    private String type;
-
     private Double money;
 
     private Date time;
 
     private String note;
 
-    private Integer historymoney;
+    private String tradeno;
+
+    private String transactionid;
+
+    private String isok;
 
     public Integer getId() {
         return id;
@@ -31,14 +33,6 @@ public class DealRecord {
 
     public void setUserid(Integer userid) {
         this.userid = userid;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public Double getMoney() {
@@ -65,11 +59,27 @@ public class DealRecord {
         this.note = note;
     }
 
-    public Integer getHistorymoney() {
-        return historymoney;
+    public String getTradeno() {
+        return tradeno;
     }
 
-    public void setHistorymoney(Integer historymoney) {
-        this.historymoney = historymoney;
+    public void setTradeno(String tradeno) {
+        this.tradeno = tradeno;
+    }
+
+    public String getTransactionid() {
+        return transactionid;
+    }
+
+    public void setTransactionid(String transactionid) {
+        this.transactionid = transactionid;
+    }
+
+    public String getIsok() {
+        return isok;
+    }
+
+    public void setIsok(String isok) {
+        this.isok = isok;
     }
 }

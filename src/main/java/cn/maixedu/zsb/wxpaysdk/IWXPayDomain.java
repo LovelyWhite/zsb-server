@@ -1,4 +1,4 @@
-package com.github.wxpay.sdk;
+package cn.maixedu.zsb.wxpaysdk;
 
 /**
  * 域名管理，实现主备域名自动切换
